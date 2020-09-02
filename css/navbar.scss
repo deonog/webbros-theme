@@ -33,10 +33,6 @@ nav {
       text-decoration: none;
       padding-bottom: 3px;
     }
-
-    #menu .list-inline-item:nth-last-child(-n + 3) {
-      margin-right: 0 !important;
-    }
   }
 
   a {
@@ -44,6 +40,7 @@ nav {
   }
 
   .links-container {
+    background: white;
     position: fixed;
     height: 100%;
     width: 70%;
@@ -51,6 +48,9 @@ nav {
     right: 0;
     transform: translateX(100%);
     z-index: 7;
+    ul {
+      margin: 0;
+    }
   }
 
   .menu-open {
@@ -65,6 +65,7 @@ nav {
     z-index: 20;
 
     span {
+      background: grey;
       width: 32px;
       height: 4px;
       margin-bottom: 0.25em;
@@ -101,10 +102,6 @@ nav {
     }
   }
 
-  .shop-icons {
-    display: none;
-  }
-
   @media (min-width: 992px) {
     a {
       color: white;
@@ -123,9 +120,9 @@ nav {
       background: transparent;
       transform: translateX(0);
       width: auto;
-      ul li:nth-last-child(-n + 2) {
-        display: none;
-      }
+      //   ul li:nth-last-child(-n + 2) {
+      //     display: none;
+      //   }
     }
 
     .nav-header {
@@ -134,10 +131,6 @@ nav {
 
     #menu-btn {
       display: none;
-    }
-
-    .shop-icons {
-      display: block;
     }
   }
 }
