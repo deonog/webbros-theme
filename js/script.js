@@ -28,10 +28,10 @@ if (header == null) {
     const navHeight = navbar.getBoundingClientRect().height;
     if (scrollHeight > navHeight) {
       navbar.classList.add("fixed-nav");
-      spanAll.forEach(function(span) {
-        span.classList.remove("span-dark");
-        span.classList.add("span-white");
-      });
+      //   spanAll.forEach(function(span) {
+      //     span.classList.remove("span-dark");
+      //     span.classList.add("span-white");
+      //   });
 
       //   links.forEach(function(link) {
       //     link.classList.remove("a-dark");
@@ -39,9 +39,9 @@ if (header == null) {
       //   });
     } else {
       navbar.classList.remove("fixed-nav");
-      spanAll.forEach(function(span) {
-        span.classList.remove("span-light");
-      });
+      //   spanAll.forEach(function(span) {
+      //     span.classList.remove("span-light");
+      //   });
       links.forEach(function(link) {
         link.classList.add("a-dark");
         link.classList.remove("a-light");
