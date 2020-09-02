@@ -9,26 +9,17 @@ nav .nav-header {
   width: 100%;
 }
 
+nav .list-inline-item:last-child {
+  display: none;
+}
+
 @media (min-width: 992px) {
   nav .list-inline-item {
     margin-right: 2em !important;
   }
   nav .list-inline-item:last-child {
+    display: block;
     margin-right: 0 !important;
-  }
-  nav .links-container a {
-    padding-bottom: 3px;
-    border-bottom: 2px solid transparent;
-  }
-  nav .links-container .a-dark:hover {
-    color: grey;
-    text-decoration: none;
-    padding-bottom: 3px;
-  }
-  nav .links-container .a-light:hover {
-    color: white;
-    text-decoration: none;
-    padding-bottom: 3px;
   }
 }
 
