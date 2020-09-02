@@ -29,22 +29,22 @@ if (header == null) {
     if (scrollHeight > navHeight) {
       navbar.classList.add("fixed-nav");
       spanAll.forEach(function(span) {
-        span.classList.add("span-dark");
-        span.classList.remove("span-white");
+        span.classList.remove("span-dark");
+        span.classList.add("span-white");
       });
 
-      links.forEach(function(link) {
-        link.classList.add("a-dark");
-        link.classList.remove("a-light");
-      });
+      //   links.forEach(function(link) {
+      //     link.classList.remove("a-dark");
+      //     link.classList.add("a-light");
+      //   });
     } else {
       navbar.classList.remove("fixed-nav");
       spanAll.forEach(function(span) {
-        span.classList.remove("span-dark");
+        span.classList.remove("span-light");
       });
       links.forEach(function(link) {
-        link.classList.remove("a-dark");
-        link.classList.add("a-light");
+        link.classList.add("a-dark");
+        link.classList.remove("a-light");
       });
     }
     // setup back to top link
