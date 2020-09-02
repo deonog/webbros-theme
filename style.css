@@ -30,9 +30,6 @@ nav .nav-header {
     text-decoration: none;
     padding-bottom: 3px;
   }
-  nav #menu .list-inline-item:nth-last-child(-n + 3) {
-    margin-right: 0 !important;
-  }
 }
 
 nav a {
@@ -40,6 +37,7 @@ nav a {
 }
 
 nav .links-container {
+  background: white;
   position: fixed;
   height: 100%;
   width: 70%;
@@ -48,6 +46,10 @@ nav .links-container {
   -webkit-transform: translateX(100%);
           transform: translateX(100%);
   z-index: 7;
+}
+
+nav .links-container ul {
+  margin: 0;
 }
 
 nav .menu-open {
@@ -64,6 +66,7 @@ nav #menu-btn {
 }
 
 nav #menu-btn span {
+  background: grey;
   width: 32px;
   height: 4px;
   margin-bottom: 0.25em;
@@ -101,10 +104,6 @@ nav #menu-btn .span:last-child {
   margin-bottom: 0em;
 }
 
-nav .shop-icons {
-  display: none;
-}
-
 @media (min-width: 992px) {
   nav a {
     color: white;
@@ -122,17 +121,11 @@ nav .shop-icons {
             transform: translateX(0);
     width: auto;
   }
-  nav .links-container ul li:nth-last-child(-n + 2) {
-    display: none;
-  }
   nav .nav-header {
     width: auto;
   }
   nav #menu-btn {
     display: none;
-  }
-  nav .shop-icons {
-    display: block;
   }
 }
 
