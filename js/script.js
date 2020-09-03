@@ -18,34 +18,14 @@ console.log(hover);
 
 if (header == null) {
   navbar.classList.add("fixed-nav");
-  links.forEach(function(link) {
-    link.classList.add("a-dark");
-    link.classList.remove("a-light");
-  });
 } else {
   window.addEventListener("scroll", function() {
     const scrollHeight = window.pageYOffset;
     const navHeight = navbar.getBoundingClientRect().height;
     if (scrollHeight > navHeight) {
       navbar.classList.add("fixed-nav");
-      //   spanAll.forEach(function(span) {
-      //     span.classList.remove("span-dark");
-      //     span.classList.add("span-white");
-      //   });
-
-      //   links.forEach(function(link) {
-      //     link.classList.remove("a-dark");
-      //     link.classList.add("a-light");
-      //   });
     } else {
       navbar.classList.remove("fixed-nav");
-      //   spanAll.forEach(function(span) {
-      //     span.classList.remove("span-light");
-      //   });
-      links.forEach(function(link) {
-        link.classList.add("a-dark");
-        link.classList.remove("a-light");
-      });
     }
     // setup back to top link
 
@@ -58,25 +38,11 @@ if (header == null) {
 }
 
 menuBtn.addEventListener("click", function() {
-  const fixedNav = navbar.classList.contains("fixed-nav");
   menu.classList.toggle("menu-open");
   overlay.classList.toggle("overlay-visible");
-  const menuOpen = menu.classList.contains("menu-open");
   span.classList.toggle("menu-btn-open");
   spanTwo.classList.toggle("menu-btn-open-2");
   spanThree.classList.toggle("menu-close");
-
-  if (!fixedNav && !menuOpen) {
-    spanAll.forEach(function(span) {
-      span.classList.add("span-white");
-      span.classList.remove("span-dark");
-    });
-  } else {
-    spanAll.forEach(function(span) {
-      span.classList.add("span-dark");
-      span.classList.remove("span-white");
-    });
-  }
 });
 
 const scrollLinks = document.querySelectorAll(".scroll-link");
@@ -87,7 +53,6 @@ scrollLinks.forEach(link => {
     // navigate to specific spot
     const id = e.currentTarget.getAttribute("href").slice(1);
     const element = document.getElementById(id);
-
     const navHeight = navbar.getBoundingClientRect().height;
     const containerHeight = linksContainer.getBoundingClientRect().height;
     const fixedNav = navbar.classList.contains("fixed-nav");
