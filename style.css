@@ -201,14 +201,21 @@ header {
 #triangle-down {
   width: 100%;
   height: 0;
-  border-left: 240px solid transparent;
-  border-right: 240px solid transparent;
+  border-left: 120px solid transparent;
+  border-right: 120px solid transparent;
   border-top: 30px solid #f5fbff;
   position: relative;
   bottom: 0;
   left: 0;
   border-bottom-right-radius: 50%;
   border-bottom-left-radius: 50%;
+}
+
+@media screen and (min-width: 767px) {
+  #triangle-down {
+    border-left: 240px solid transparent;
+    border-right: 240px solid transparent;
+  }
 }
 
 body {
