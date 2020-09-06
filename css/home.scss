@@ -1,0 +1,59 @@
+/* ABOUT US SECTION */
+
+#about-us {
+  ul {
+    margin: 0;
+    padding: 0;
+    list-style: none; /* Remove default bullets */
+    li {
+      margin: 0;
+    }
+    li::before {
+      content: "\25A0"; /* Add content: \2022 is the CSS Code/unicode for a bullet */
+      color: $lightBlue; /* Change the color */
+      font-size: 12px;
+      font-weight: bold; /* If you want it to be bold */
+      display: inline-block; /* Needed to add space between the bullet and the text */
+      width: 1em; /* Also needed for space (tweak if needed) */
+      margin-left: -1.4em; /* Also needed for space (tweak if needed) */
+    }
+  }
+}
+
+/* SERVICES SECTION */
+
+#services {
+  background: $darkBlue;
+  .services {
+    .service-icon {
+      background: #fff;
+      width: 5rem;
+      height: 5rem;
+      border-radius: 50%;
+      box-shadow: $iconShadow;
+      i {
+        font-size: 1.5em;
+      }
+    }
+  }
+}
+
+/* ROADMAP */
+
+.roadmap {
+  .line {
+    height: 100%;
+    width: 4px;
+    background: #000;
+  }
+  .dot {
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    background: #000;
+    display: block;
+    position: relative;
+    left: -12px;
+    top: calc(50% - 12px);
+  }
+}
