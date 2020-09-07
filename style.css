@@ -282,6 +282,57 @@ header {
   top: calc(50% - 12px);
 }
 
+.roadmap .grid {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 10% 1fr;
+      grid-template-columns: 10% 1fr;
+  -ms-grid-rows: 1fr 1fr;
+      grid-template-rows: 1fr 1fr;
+      grid-template-areas: "a b" "a c";
+  width: 100%;
+}
+
+@media screen and (min-width: 992px) {
+  .roadmap .grid {
+    -ms-grid-columns: (1fr)[3];
+        grid-template-columns: repeat(3, 1fr);
+    -ms-grid-rows: 1fr;
+        grid-template-rows: 1fr;
+        grid-template-areas: "b a c";
+  }
+}
+
+@media screen and (min-width: 992px) {
+  .roadmap .grid:nth-child(even) {
+        grid-template-areas: "c a b";
+  }
+}
+
+.roadmap .roadmap-line {
+  -ms-grid-row: 1;
+  -ms-grid-row-span: 2;
+  -ms-grid-column: 1;
+  grid-area: a;
+}
+
+.roadmap .roadmap-content {
+  -ms-grid-row: 1;
+  -ms-grid-column: 2;
+  grid-area: b;
+  -ms-flex-item-align: center;
+      -ms-grid-row-align: center;
+      align-self: center;
+}
+
+.roadmap .roadmap-img {
+  -ms-grid-row: 2;
+  -ms-grid-column: 2;
+  grid-area: c;
+  -ms-grid-column-align: center;
+      justify-self: center;
+}
+
 body {
   height: 200vh;
 }

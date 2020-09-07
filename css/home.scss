@@ -56,4 +56,39 @@
     left: -12px;
     top: calc(50% - 12px);
   }
+
+  .grid {
+    display: grid;
+    grid-template-columns: 10% 1fr;
+    grid-template-rows: 1fr 1fr;
+    grid-template-areas:
+      "a b"
+      "a c";
+    width: 100%;
+    @media screen and (min-width: 992px) {
+      grid-template-columns: repeat(3, 1fr);
+      grid-template-rows: 1fr;
+      grid-template-areas: "b a c";
+    }
+  }
+
+  .grid:nth-child(even) {
+    @media screen and (min-width: 992px) {
+      grid-template-areas: "c a b";
+    }
+  }
+
+  .roadmap-line {
+    grid-area: a;
+  }
+
+  .roadmap-content {
+    grid-area: b;
+    align-self: center;
+  }
+
+  .roadmap-img {
+    grid-area: c;
+    justify-self: center;
+  }
 }
