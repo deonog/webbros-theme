@@ -19,7 +19,7 @@ console.log(hover);
 if (header == null) {
   navbar.classList.add("fixed-nav");
 } else {
-  window.addEventListener("scroll", function() {
+  window.addEventListener("scroll", function () {
     const scrollHeight = window.pageYOffset;
     const navHeight = navbar.getBoundingClientRect().height;
     if (scrollHeight > navHeight) {
@@ -37,7 +37,7 @@ if (header == null) {
   });
 }
 
-menuBtn.addEventListener("click", function() {
+menuBtn.addEventListener("click", function () {
   menu.classList.toggle("menu-open");
   overlay.classList.toggle("overlay-visible");
   span.classList.toggle("menu-btn-open");
@@ -46,8 +46,8 @@ menuBtn.addEventListener("click", function() {
 });
 
 const scrollLinks = document.querySelectorAll(".scroll-link");
-scrollLinks.forEach(link => {
-  link.addEventListener("click", e => {
+scrollLinks.forEach((link) => {
+  link.addEventListener("click", (e) => {
     // prevent default
     e.preventDefault();
     // navigate to specific spot
@@ -67,7 +67,7 @@ scrollLinks.forEach(link => {
 
     window.scrollTo({
       left: 0,
-      top: position
+      top: position,
     });
   });
 });
