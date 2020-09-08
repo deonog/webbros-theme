@@ -1,4 +1,17 @@
-/* ABOUT US SECTION */
+/*----------------------------------------*/
+/*  Table of contents
+/*----------------------------------------*/
+/*
+1. About us
+2. Roadmap
+3. Services
+4. Portfolio
+5. Testimonials
+*/
+
+/*----------------------------------------*/
+/*  01. About us
+/*----------------------------------------*/
 
 #about-us {
   ul {
@@ -20,7 +33,9 @@
   }
 }
 
-/* SERVICES SECTION */
+/*----------------------------------------*/
+/*  02. SERVICES
+/*----------------------------------------*/
 
 #services {
   background: $bgColor;
@@ -46,73 +61,79 @@
   }
 }
 
-/* ROADMAP */
+/*----------------------------------------*/
+/*  03. ROADMAP
+/*----------------------------------------*/
 
 #roadmap {
   display: none;
-}
-.roadmap {
-  .line {
-    height: 100%;
-    width: 4px;
-    background: #000;
-  }
-  .dot {
-    width: 20px;
-    height: 20px;
-    border-radius: 50%;
-    background: #000;
-    display: block;
-    position: relative;
-    left: -8px;
-    top: 15%;
-    @media screen and (min-width: 992px) {
-      top: calc(50% - 12px);
+  .roadmap {
+    .line {
+      height: 100%;
+      width: 4px;
+      background: #000;
     }
-  }
-
-  .grid {
-    display: grid;
-    grid-template-columns: 10% 1fr;
-    grid-template-rows: 1fr 1fr;
-    grid-template-areas:
-      "a b"
-      "a c";
-    width: 100%;
-    @media screen and (min-width: 992px) {
-      grid-template-columns: repeat(3, 1fr);
-      grid-template-rows: 1fr;
-      grid-template-areas: "b a c";
+    .dot {
+      width: 20px;
+      height: 20px;
+      border-radius: 50%;
+      background: #000;
+      display: block;
+      position: relative;
+      left: -8px;
+      top: 15%;
+      @media screen and (min-width: 992px) {
+        top: calc(50% - 12px);
+      }
     }
-  }
 
-  .grid:nth-child(even) {
-    @media screen and (min-width: 992px) {
-      grid-template-areas: "c a b";
+    .grid {
+      display: grid;
+      grid-template-columns: 10% 1fr;
+      grid-template-rows: 1fr 1fr;
+      grid-template-areas:
+        "a b"
+        "a c";
+      width: 100%;
+      @media screen and (min-width: 992px) {
+        grid-template-columns: repeat(3, 1fr);
+        grid-template-rows: 1fr;
+        grid-template-areas: "b a c";
+      }
     }
-  }
 
-  .roadmap-line {
-    grid-area: a;
-  }
+    .grid:nth-child(even) {
+      @media screen and (min-width: 992px) {
+        grid-template-areas: "c a b";
+      }
+    }
 
-  .roadmap-content {
-    grid-area: b;
-    align-self: center;
-  }
+    .roadmap-line {
+      grid-area: a;
+    }
 
-  .roadmap-img {
-    grid-area: c;
-    justify-self: center;
-  }
-
-  @media screen and (min-width: 992px) {
-    .roadmap-img,
     .roadmap-content {
-      padding: 2rem 0;
+      grid-area: b;
+      align-self: center;
+    }
+
+    .roadmap-img {
+      grid-area: c;
+      justify-self: center;
+    }
+
+    @media screen and (min-width: 992px) {
+      .roadmap-img,
+      .roadmap-content {
+        padding: 2rem 0;
+      }
     }
   }
 }
+
+/*----------------------------------------*/
+/*  04. PORTFOLIO
+/*----------------------------------------*/
 
 #portfolio {
   .project {
@@ -215,7 +236,11 @@
   }
 }
 
-#testimonial {
+/*----------------------------------------*/
+/*  05. TESTIMONIALS
+/*----------------------------------------*/
+
+#testimonials {
   background: $bgColor;
   .slider {
     .testimonial-wrapper {
