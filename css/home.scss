@@ -242,57 +242,19 @@
 
 #testimonials {
   background: $bgColor;
-  .slider {
-    .testimonial-wrapper {
-      display: flex;
-      flex-direction: column;
-      @media screen and (min-width: 767px) {
-        flex-direction: row;
-        min-height: 200px;
-      }
-    }
-    .testimonial {
-      display: flex;
-      flex-wrap: wrap;
-      background: #fff;
-      width: 50%;
-      margin-right: 32px;
-      border-radius: $borderRadius;
-      padding: $padding;
-    }
-    .testimonial:last-child {
-      margin-right: 0;
-    }
-
-    /*Flex items*/
-    .carousel-control-prev {
-      left: 0;
-      @media screen and (min-width: 767px) {
-        left: -100px;
-      }
-    }
-    .carousel-control-next {
-      right: 0;
-      @media screen and (min-width: 767px) {
-        right: -100px;
-      }
-    }
-    .carousel-indicators {
-      top: 240px;
-    }
-    @media (min-width: 320px) and (max-width: 640px) {
-      .carousel-inner .carousel-item p {
-        font-size: 14px;
-      }
-      .carousel-control-prev {
-        left: -40px;
-      }
-      .carousel-control-next {
-        right: -40px;
-      }
-      .carousel-indicators {
-        top: 400px;
-      }
-    }
+  .testimonials-container {
+    background: #fff;
+    box-shadow: $boxShadow;
+    border-radius: $borderRadius;
+  }
+  #client-testimonial-carousel {
+    min-height: 200px;
+  }
+  .carousel-control i {
+    color: #303030;
+    font-size: 1.5em;
+  }
+  .carousel-control li {
+    background-color: #303030;
   }
 }
