@@ -23,16 +23,24 @@
 /* SERVICES SECTION */
 
 #services {
-  background: $darkBlue;
+  background: $bgColor;
   .services {
-    .service-icon {
-      background: #fff;
-      width: 5rem;
-      height: 5rem;
-      border-radius: 50%;
-      box-shadow: $iconShadow;
-      i {
-        font-size: 1.5em;
+    .col-lg-4 {
+      .service {
+        background: #fff;
+        border-radius: 8px;
+        box-shadow: $boxShadow;
+        padding: 1rem 1.5rem;
+      }
+
+      .service-icon {
+        background: $bgColor;
+        width: 5rem;
+        height: 5rem;
+        border-radius: 8px;
+        i {
+          font-size: 1.5em;
+        }
       }
     }
   }
@@ -40,6 +48,9 @@
 
 /* ROADMAP */
 
+#roadmap {
+  display: none;
+}
 .roadmap {
   .line {
     height: 100%;
@@ -53,8 +64,11 @@
     background: #000;
     display: block;
     position: relative;
-    left: -12px;
-    top: calc(50% - 12px);
+    left: -8px;
+    top: 15%;
+    @media screen and (min-width: 992px) {
+      top: calc(50% - 12px);
+    }
   }
 
   .grid {
@@ -90,5 +104,48 @@
   .roadmap-img {
     grid-area: c;
     justify-self: center;
+  }
+
+  @media screen and (min-width: 992px) {
+    .roadmap-img,
+    .roadmap-content {
+      padding: 2rem 0;
+    }
+  }
+}
+
+#portfolio {
+  background: green;
+  .slider {
+    .testimonial {
+      background: #fff;
+    }
+    .carousel-inner .carousel-item .img-box {
+      width: 135px;
+      height: 135px;
+    }
+    .carousel-control-prev {
+      left: -100px;
+    }
+    .carousel-control-next {
+      right: -100px;
+    }
+    .carousel-indicators {
+      top: 200px;
+    }
+    @media (min-width: 320px) and (max-width: 640px) {
+      .carousel-inner .carousel-item p {
+        font-size: 14px;
+      }
+      .carousel-control-prev {
+        left: -40px;
+      }
+      .carousel-control-next {
+        right: -40px;
+      }
+      .carousel-indicators {
+        top: 400px;
+      }
+    }
   }
 }
