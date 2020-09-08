@@ -335,42 +335,185 @@ header {
   }
 }
 
-#portfolio {
-  background: green;
+#portfolio .project {
+  -webkit-box-shadow: 0 5px 10px rgba(154, 160, 185, 0.05), 0 15px 40px rgba(166, 173, 201, 0.2);
+          box-shadow: 0 5px 10px rgba(154, 160, 185, 0.05), 0 15px 40px rgba(166, 173, 201, 0.2);
+  overflow: hidden;
+  border-radius: 8px;
+  position: relative;
 }
 
-#portfolio .slider .testimonial {
+#portfolio .project .project .title {
+  color: #1a1a1a;
+  text-align: center;
+  margin-bottom: 10px;
+}
+
+#portfolio .project .content {
+  position: relative;
+  width: 100%;
+  max-width: 400px;
+  margin: auto;
+  overflow: hidden;
+}
+
+#portfolio .project .content .content-overlay {
+  background: rgba(0, 0, 0, 0.7);
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  left: 0;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  opacity: 0;
+  -webkit-transition: all 0.3s ease;
+  transition: all 0.3s ease;
+}
+
+#portfolio .project .content:hover .content-overlay {
+  opacity: 1;
+}
+
+#portfolio .project .img-container {
+  padding: 2rem 2.5rem;
+  width: 100%;
+}
+
+#portfolio .project .content-image {
+  width: 100%;
+}
+
+#portfolio .project .content-details {
+  position: absolute;
+  text-align: center;
+  padding-left: 1em;
+  padding-right: 1em;
+  width: 100%;
+  top: 50%;
+  left: 50%;
+  opacity: 0;
+  -webkit-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+  -webkit-transition: all 0.3s ease-in-out 0s;
+  transition: all 0.3s ease-in-out 0s;
+}
+
+#portfolio .project .content:hover .content-details {
+  top: 50%;
+  left: 50%;
+  opacity: 1;
+}
+
+#portfolio .project .content-details h3 {
+  color: #fff;
+  font-weight: 500;
+  letter-spacing: 0.15em;
+  margin-bottom: 0.5em;
+  text-transform: uppercase;
+}
+
+#portfolio .project .content-details p {
+  color: #fff;
+  font-size: 0.8em;
+}
+
+#portfolio .project .fadeIn-bottom {
+  top: 80%;
+}
+
+#portfolio .project .fadeIn-top {
+  top: 20%;
+}
+
+#portfolio .project .fadeIn-left {
+  left: 20%;
+}
+
+#portfolio .project .fadeIn-right {
+  left: 80%;
+}
+
+#testimonial {
+  background: #f5fbff;
+}
+
+#testimonial .slider {
+  /*Flex items*/
+}
+
+#testimonial .slider .testimonial-wrapper {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+@media screen and (min-width: 767px) {
+  #testimonial .slider .testimonial-wrapper {
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    min-height: 200px;
+  }
+}
+
+#testimonial .slider .testimonial {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
   background: #fff;
+  width: 50%;
+  margin-right: 32px;
+  border-radius: 8px;
+  padding: 2rem 2.5rem;
 }
 
-#portfolio .slider .carousel-inner .carousel-item .img-box {
-  width: 135px;
-  height: 135px;
+#testimonial .slider .testimonial:last-child {
+  margin-right: 0;
 }
 
-#portfolio .slider .carousel-control-prev {
-  left: -100px;
+#testimonial .slider .carousel-control-prev {
+  left: 0;
 }
 
-#portfolio .slider .carousel-control-next {
-  right: -100px;
+@media screen and (min-width: 767px) {
+  #testimonial .slider .carousel-control-prev {
+    left: -100px;
+  }
 }
 
-#portfolio .slider .carousel-indicators {
-  top: 200px;
+#testimonial .slider .carousel-control-next {
+  right: 0;
+}
+
+@media screen and (min-width: 767px) {
+  #testimonial .slider .carousel-control-next {
+    right: -100px;
+  }
+}
+
+#testimonial .slider .carousel-indicators {
+  top: 240px;
 }
 
 @media (min-width: 320px) and (max-width: 640px) {
-  #portfolio .slider .carousel-inner .carousel-item p {
+  #testimonial .slider .carousel-inner .carousel-item p {
     font-size: 14px;
   }
-  #portfolio .slider .carousel-control-prev {
+  #testimonial .slider .carousel-control-prev {
     left: -40px;
   }
-  #portfolio .slider .carousel-control-next {
+  #testimonial .slider .carousel-control-next {
     right: -40px;
   }
-  #portfolio .slider .carousel-indicators {
+  #testimonial .slider .carousel-indicators {
     top: 400px;
   }
 }
