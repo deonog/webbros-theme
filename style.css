@@ -10,6 +10,7 @@
 /*----------------------------------------*/
 /*
 1. Basics
+
 */
 /*----------------------------------------*/
 /*  01. Basics
@@ -476,84 +477,24 @@ header {
   background: #f5fbff;
 }
 
-#testimonials .slider {
-  /*Flex items*/
-}
-
-#testimonials .slider .testimonial-wrapper {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-}
-
-@media screen and (min-width: 767px) {
-  #testimonials .slider .testimonial-wrapper {
-    -webkit-box-orient: horizontal;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: row;
-            flex-direction: row;
-    min-height: 200px;
-  }
-}
-
-#testimonials .slider .testimonial {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -ms-flex-wrap: wrap;
-      flex-wrap: wrap;
+#testimonials .testimonials-container {
   background: #fff;
-  width: 50%;
-  margin-right: 32px;
+  -webkit-box-shadow: 0 5px 10px rgba(154, 160, 185, 0.05), 0 15px 40px rgba(166, 173, 201, 0.2);
+          box-shadow: 0 5px 10px rgba(154, 160, 185, 0.05), 0 15px 40px rgba(166, 173, 201, 0.2);
   border-radius: 8px;
-  padding: 2rem 2.5rem;
 }
 
-#testimonials .slider .testimonial:last-child {
-  margin-right: 0;
+#testimonials #client-testimonial-carousel {
+  min-height: 200px;
 }
 
-#testimonials .slider .carousel-control-prev {
-  left: 0;
+#testimonials .carousel-control i {
+  color: #303030;
+  font-size: 1.5em;
 }
 
-@media screen and (min-width: 767px) {
-  #testimonials .slider .carousel-control-prev {
-    left: -100px;
-  }
-}
-
-#testimonials .slider .carousel-control-next {
-  right: 0;
-}
-
-@media screen and (min-width: 767px) {
-  #testimonials .slider .carousel-control-next {
-    right: -100px;
-  }
-}
-
-#testimonials .slider .carousel-indicators {
-  top: 240px;
-}
-
-@media (min-width: 320px) and (max-width: 640px) {
-  #testimonials .slider .carousel-inner .carousel-item p {
-    font-size: 14px;
-  }
-  #testimonials .slider .carousel-control-prev {
-    left: -40px;
-  }
-  #testimonials .slider .carousel-control-next {
-    right: -40px;
-  }
-  #testimonials .slider .carousel-indicators {
-    top: 400px;
-  }
+#testimonials .carousel-control li {
+  background-color: #303030;
 }
 
 body {
