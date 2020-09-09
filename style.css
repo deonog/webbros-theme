@@ -214,6 +214,40 @@ header {
   width: 100%;
 }
 
+footer {
+  background: #f5fbff;
+  position: relative;
+}
+
+footer a,
+footer h4,
+footer p,
+footer h1 {
+  color: #303030;
+}
+
+footer .footer-top .social-lists li {
+  display: inline-block;
+}
+
+footer .copyright-bottom {
+  border-top: 1px solid #ead7ff;
+}
+
+footer .copyright-bottom ul {
+  text-align: right;
+}
+
+footer .copyright-bottom ul li {
+  display: inline-block;
+}
+
+footer .copyright-bottom ul li:first-child a {
+  border: none;
+  margin-left: 0;
+  padding-left: 0;
+}
+
 /*----------------------------------------*/
 /*  Table of contents
 /*----------------------------------------*/
@@ -223,6 +257,8 @@ header {
 3. Services
 4. Portfolio
 5. Testimonials
+7. Stats
+8. Why Choose
 */
 /*----------------------------------------*/
 /*  01. About us
@@ -498,8 +534,112 @@ header {
   background-color: #303030;
 }
 
-body {
-  height: 200vh;
+/*----------------------------------------*/
+/*  06. Stat Section Style
+/*----------------------------------------*/
+.stat-section {
+  background: green;
+}
+
+.stat-section .single-stat {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+}
+
+.stat-section .single-stat h1 {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  color: #fff;
+}
+
+.stat-section .single-stat .odometer-inside {
+  font-size: 52px !important;
+}
+
+.stat-section .single-stat .sub-text {
+  margin-left: 20px;
+  font-size: 18px !important;
+  font-weight: 600;
+}
+
+/*----------------------------------------*/
+/*  07. Why-Choose Section Style
+/*----------------------------------------*/
+.why-choose-section .row {
+  position: relative;
+}
+
+.why-choose-section .single-why {
+  background: #fff;
+  border-radius: 3px;
+  border: 1px solid #e2eaf6;
+  padding: 20px;
+  -webkit-transition: all 0.3s ease;
+  transition: all 0.3s ease;
+  margin-bottom: 2rem;
+}
+
+.why-choose-section .single-why h4 {
+  margin: 20px 0;
+}
+
+@media (min-width: 991px) {
+  .why-choose-section .single-why {
+    margin-bottom: 0;
+  }
+}
+
+.why-choose-section .single-why:hover {
+  -webkit-transform: translateY(-6px);
+  transform: translateY(-6px);
+  cursor: pointer;
+  -webkit-box-shadow: 0px 4px 25px rgba(0, 0, 0, 0.1);
+  box-shadow: 0px 4px 25px rgba(0, 0, 0, 0.1);
+}
+
+.why-choose-section .why-left-wrap {
+  max-width: 485px;
+  float: right;
+}
+
+@media (max-width: 485px) {
+  .why-choose-section .why-left-wrap {
+    width: 100%;
+  }
+}
+
+@media (max-width: 1199px) and (min-width: 992px) {
+  .why-choose-section .why-left-wrap {
+    width: 100%;
+  }
+}
+
+@media (max-width: 991px) {
+  .why-choose-section .why-left-wrap {
+    padding-top: 30px;
+    margin: 0 auto;
+    float: none;
+    text-align: center;
+  }
+}
+
+.why-choose-section h5 {
+  font-weight: 600;
+  font-size: 20px;
+  margin-bottom: 0px;
+  padding: 20px 0px;
+}
+
+.why-choose-section p {
+  margin-bottom: 20px;
 }
 
 .padding {
