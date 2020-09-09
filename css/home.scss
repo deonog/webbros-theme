@@ -7,6 +7,8 @@
 3. Services
 4. Portfolio
 5. Testimonials
+7. Stats
+8. Why Choose
 */
 
 /*----------------------------------------*/
@@ -257,5 +259,105 @@
   }
   .carousel-control li {
     background-color: #303030;
+  }
+}
+
+/*----------------------------------------*/
+/*  06. Stat Section Style
+/*----------------------------------------*/
+.stat-section {
+  background: green;
+}
+
+.stat-section .single-stat {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+}
+
+.stat-section .single-stat h1 {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  color: #fff;
+}
+
+.stat-section .single-stat .odometer-inside {
+  font-size: 52px !important;
+}
+
+.stat-section .single-stat .sub-text {
+  margin-left: 20px;
+  font-size: 18px !important;
+  font-weight: 600;
+}
+
+/*----------------------------------------*/
+/*  07. Why-Choose Section Style
+/*----------------------------------------*/
+.why-choose-section {
+  .row {
+    position: relative;
+  }
+
+  .single-why {
+    background: #fff;
+    border-radius: 3px;
+    border: 1px solid #e2eaf6;
+    padding: 20px;
+    transition: $transition;
+    margin-bottom: 2rem;
+    h4 {
+      margin: 20px 0;
+    }
+
+    @media (min-width: 991px) {
+      margin-bottom: 0;
+    }
+  }
+
+  .single-why:hover {
+    -webkit-transform: translateY(-6px);
+    transform: translateY(-6px);
+    cursor: pointer;
+    -webkit-box-shadow: 0px 4px 25px rgba(0, 0, 0, 0.1);
+    box-shadow: 0px 4px 25px rgba(0, 0, 0, 0.1);
+  }
+
+  .why-left-wrap {
+    max-width: 485px;
+    float: right;
+
+    @media (max-width: 485px) {
+      width: 100%;
+    }
+
+    @media (max-width: 1199px) and (min-width: 992px) {
+      width: 100%;
+    }
+
+    @media (max-width: 991px) {
+      padding-top: 30px;
+      margin: 0 auto;
+      float: none;
+      text-align: center;
+    }
+  }
+
+  h5 {
+    font-weight: 600;
+    font-size: 20px;
+    margin-bottom: 0px;
+    padding: 20px 0px;
+  }
+
+  p {
+    margin-bottom: 20px;
   }
 }
