@@ -29,7 +29,7 @@ body {
 }
 
 .padding {
-  padding: 4rem 0;
+  padding: 4.5rem 0;
 }
 
 h1 {
@@ -82,13 +82,14 @@ p {
   font-size: 1em;
   line-height: 1.5em;
   font-family: $sourceSansRegular;
+  margin-bottom: 0;
 }
 .heading {
   margin-bottom: 2.5rem;
   span {
-    font-family: $montserratSemibold;
+    font-family: $sourceSansSemibold;
     text-transform: uppercase;
     color: $secondaryColor;
-    margin-bottom: 8px;
+    margin-bottom: 1rem;
   }
 }
