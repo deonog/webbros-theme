@@ -33,7 +33,7 @@ body {
 }
 
 h1 {
-  font-family: $montserratBold;
+  font-family: $montserratSemibold;
   font-size: 2.5em;
   color: $black;
 }
@@ -85,6 +85,7 @@ p {
   margin-bottom: 0;
 }
 .heading {
+  font-family: $montserratSemibold;
   margin-bottom: 2.5rem;
   span {
     font-family: $sourceSansSemibold;
