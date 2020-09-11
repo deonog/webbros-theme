@@ -16,6 +16,17 @@
 /*----------------------------------------*/
 
 #about-us {
+  background: url("img/bg-illustration.svg");
+  background-repeat: repeat-y;
+  background-position: center;
+  background-size: contain;
+  @media screen and (min-width: 992px) {
+    background-repeat: no-repeat;
+    background-position: right -20%;
+  }
+  .heading {
+    margin-bottom: 1rem;
+  }
   ul {
     margin: 0;
     padding: 0;
@@ -40,21 +51,54 @@
 /*----------------------------------------*/
 
 #services {
+  background: $lightBlue;
   .services {
     .col-lg-4 {
+      margin-bottom: 1.5rem;
+      &:last-child {
+        margin-bottom: 0;
+      }
+      @media screen and (min-width: 992px) {
+        margin-bottom: 0;
+      }
       .service {
         background: #fff;
         border-radius: 8px;
         box-shadow: $boxShadow;
         padding: $padding;
+        transition: $transition;
+        &:hover {
+          -webkit-transform: translateY(-6px);
+          transform: translateY(-6px);
+          cursor: pointer;
+          -webkit-box-shadow: 0px 4px 25px rgba(0, 0, 0, 0.1);
+          box-shadow: 0px 4px 25px rgba(0, 0, 0, 0.1);
+        }
         .service-icon {
-          background: $lightBlue;
           width: 4rem;
           height: 4rem;
           border-radius: 8px;
           margin-bottom: 1rem;
           i {
             font-size: 1.5em;
+          }
+        }
+        .icon-blue {
+          background: $lightBlue;
+          i {
+            color: $actionColor;
+          }
+        }
+        .icon-red {
+          background: rgba(255, 186, 186, 0.164);
+          i {
+            color: rgb(148, 8, 8);
+          }
+        }
+        .icon-yellow {
+          background: rgba(253, 253, 165, 0.281);
+          i {
+            color: rgb(163, 163, 3);
           }
         }
         h4 {
@@ -143,102 +187,120 @@
 /*----------------------------------------*/
 
 #portfolio {
-  .project {
-    box-shadow: $boxShadow;
-    overflow: hidden;
-    border-radius: $borderRadius;
-    position: relative;
+  background: url("img/bg-illustration.svg");
+  background-repeat: repeat-y;
+  background-position: center;
+  background-size: contain;
+  @media screen and (min-width: 992px) {
+    background-repeat: no-repeat;
+    background-position: left -10%;
+  }
 
-    .project .title {
-      color: #1a1a1a;
-      text-align: center;
-      margin-bottom: 10px;
+  .projects-container {
+    .col-lg-4 {
+      margin-bottom: 1.5rem;
+      &:last-child {
+        margin-bottom: 0;
+      }
+      @media screen and (min-width: 992px) {
+        margin-bottom: 0;
+      }
     }
-
-    .content {
-      position: relative;
-      width: 100%;
-      max-width: 400px;
-      margin: auto;
+    .project {
+      box-shadow: $boxShadow;
       overflow: hidden;
-    }
-
-    .content .content-overlay {
-      background: rgba(0, 0, 0, 0.7);
-      position: absolute;
+      border-radius: $borderRadius;
+      position: relative;
+      background: #fff;
       height: 100%;
-      width: 100%;
-      left: 0;
-      top: 0;
-      bottom: 0;
-      right: 0;
-      opacity: 0;
-      transition: $transition;
-    }
+      .project .title {
+        color: #1a1a1a;
+        text-align: center;
+        margin-bottom: 10px;
+      }
 
-    .content:hover .content-overlay {
-      opacity: 1;
-    }
+      .content {
+        position: relative;
+        width: 100%;
 
-    .img-container {
-      padding: $padding;
-      width: 100%;
-    }
+        margin: auto;
+        overflow: hidden;
+        &:hover .content-details {
+          top: 50%;
+          left: 50%;
+          opacity: 1;
+        }
+        &:hover .content-overlay {
+          opacity: 1;
+        }
+        .content-overlay {
+          background: #1669a0e7;
+          position: absolute;
+          height: 100%;
+          width: 100%;
+          left: 0;
+          top: 0;
+          bottom: 0;
+          right: 0;
+          opacity: 0;
+          transition: $transition;
+        }
+        .img-container {
+          padding: $padding;
+          width: 100%;
+          .content-image {
+            width: 100%;
+          }
+        }
+        .content-details {
+          position: absolute;
+          text-align: left;
+          padding: 0 1rem;
+          width: 100%;
+          top: 50%;
+          left: 50%;
+          opacity: 0;
+          -webkit-transform: translate(-50%, -50%);
+          -moz-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+          transition: $transition;
+          .project-icon {
+            background: transparent;
+            border: 2px solid #fff;
+            border-radius: 50%;
+            padding: 10px;
+            width: 2.5rem;
+            height: 2.5rem;
+            i {
+              color: #fff;
+            }
+          }
+          h4 {
+            color: #fff;
+            margin: 0.75rem 0 0.35rem 0;
+          }
+          p {
+            color: #fff;
+            margin-bottom: 0;
+          }
+        }
 
-    .content-image {
-      width: 100%;
-    }
+        .fadeIn-bottom {
+          top: 80%;
+        }
 
-    .content-details {
-      position: absolute;
-      text-align: center;
-      padding-left: 1em;
-      padding-right: 1em;
-      width: 100%;
-      top: 50%;
-      left: 50%;
-      opacity: 0;
-      -webkit-transform: translate(-50%, -50%);
-      -moz-transform: translate(-50%, -50%);
-      transform: translate(-50%, -50%);
-      -webkit-transition: all 0.3s ease-in-out 0s;
-      -moz-transition: all 0.3s ease-in-out 0s;
-      transition: all 0.3s ease-in-out 0s;
-    }
+        .fadeIn-top {
+          top: 20%;
+        }
 
-    .content:hover .content-details {
-      top: 50%;
-      left: 50%;
-      opacity: 1;
-    }
+        .fadeIn-left {
+          left: 20%;
+        }
 
-    .content-details h3 {
-      color: #fff;
-      font-weight: 500;
-      letter-spacing: 0.15em;
-      margin-bottom: 0.5em;
-      text-transform: uppercase;
-    }
-
-    .content-details p {
-      color: #fff;
-      font-size: 0.8em;
-    }
-
-    .fadeIn-bottom {
-      top: 80%;
-    }
-
-    .fadeIn-top {
-      top: 20%;
-    }
-
-    .fadeIn-left {
-      left: 20%;
-    }
-
-    .fadeIn-right {
-      left: 80%;
+        .fadeIn-right {
+          left: 80%;
+        }
+      }
     }
   }
 }
@@ -307,6 +369,14 @@
 /*  07. Why-Choose Section Style
 /*----------------------------------------*/
 .why-choose-section {
+  background: url("img/bg-illustration.svg");
+  background-repeat: repeat-y;
+  background-position: center;
+  background-size: contain;
+  @media screen and (min-width: 992px) {
+    background-repeat: no-repeat;
+    background-position: left -20%;
+  }
   .row {
     position: relative;
   }
@@ -364,5 +434,16 @@
 
   p {
     margin-bottom: 20px;
+  }
+}
+
+#contact {
+  background: url("img/bg-illustration.svg");
+  background-repeat: repeat-y;
+  background-position: center;
+  background-size: contain;
+  @media screen and (min-width: 992px) {
+    background-repeat: no-repeat;
+    background-position: left -20%;
   }
 }
