@@ -40,23 +40,28 @@
 /*----------------------------------------*/
 
 #services {
-  background: $bgColor;
   .services {
     .col-lg-4 {
       .service {
         background: #fff;
         border-radius: 8px;
         box-shadow: $boxShadow;
-        padding: 1rem 1.5rem;
-      }
-
-      .service-icon {
-        background: $bgColor;
-        width: 5rem;
-        height: 5rem;
-        border-radius: 8px;
-        i {
-          font-size: 1.5em;
+        padding: $padding;
+        .service-icon {
+          background: $lightBlue;
+          width: 4rem;
+          height: 4rem;
+          border-radius: 8px;
+          margin-bottom: 1rem;
+          i {
+            font-size: 1.5em;
+          }
+        }
+        h4 {
+          margin-bottom: 0.5rem;
+        }
+        p {
+          margin-bottom: 0.75rem;
         }
       }
     }

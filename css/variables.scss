@@ -1,12 +1,27 @@
 // Colors
-$lightBlue: #75c6fd;
+$primaryColor: #46b3e6;
+$secondaryColor: #75c6fd;
+$actionColor: #1668a0;
+$lightBlue: #f5fbff;
+$black: #303030;
+$white: #ffffff;
 $darkBlue: #1668a0;
 $bgColor: #f5fbff;
 $navShadow: 0px 2px 10px 0px rgba(117, 198, 253, 0.5);
 $iconShadow: 0px 0px 20px 0px rgba(117, 198, 253, 0.5);
 $boxShadow: 0 5px 10px rgba(154, 160, 185, 0.05),
   0 15px 40px rgba(166, 173, 201, 0.2);
+
 // Fonts
+$sourceSansRegular: "Source Sans Pro Regular", sans-serif;
+$sourceSansBold: "Source Sans Pro Bold", sans-serif;
+$sourceSansSemibold: "Source Sans Pro Semibold", sans-serif;
+$sourceSansLight: "Source Sans Pro Light", sans-serif;
+$sourceSansItalic: "Source Sans Pro Italic", sans-serif;
+$montserratBold: "Montserrat Bold", sans-serif;
+$montserratSemibold: "Montserrat Semibold", sans-serif;
+$montserratRegular: "Montserrat Regular", sans-serif;
+$montserratMedium: "Montserrat Medium", sans-serif;
 
 // Transitions
 $transition: all 0.3s ease;
