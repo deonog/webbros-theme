@@ -440,7 +440,7 @@ footer .copyright-bottom ul li:first-child a {
   border-radius: 8px;
   -webkit-box-shadow: 0 5px 10px rgba(154, 160, 185, 0.05), 0 15px 40px rgba(166, 173, 201, 0.2);
           box-shadow: 0 5px 10px rgba(154, 160, 185, 0.05), 0 15px 40px rgba(166, 173, 201, 0.2);
-  padding: 2rem 2.5rem;
+  padding: 1.5rem 2rem;
   -webkit-transition: all 0.3s ease;
   transition: all 0.3s ease;
 }
@@ -663,7 +663,7 @@ footer .copyright-bottom ul li:first-child a {
 }
 
 #portfolio .projects-container .project .content .img-container {
-  padding: 2rem 2.5rem;
+  padding: 1.5rem 2rem;
   width: 100%;
 }
 
@@ -674,7 +674,7 @@ footer .copyright-bottom ul li:first-child a {
 #portfolio .projects-container .project .content .content-details {
   position: absolute;
   text-align: left;
-  padding: 0 1rem;
+  padding: 0 1.5rem;
   width: 100%;
   top: 50%;
   left: 50%;
@@ -736,7 +736,7 @@ footer .copyright-bottom ul li:first-child a {
   -webkit-box-shadow: 0 5px 10px rgba(154, 160, 185, 0.05), 0 15px 40px rgba(166, 173, 201, 0.2);
           box-shadow: 0 5px 10px rgba(154, 160, 185, 0.05), 0 15px 40px rgba(166, 173, 201, 0.2);
   border-radius: 8px;
-  padding: 2rem 2.5rem;
+  padding: 1.5rem 2rem;
 }
 
 #testimonials #client-testimonial-carousel {
@@ -893,7 +893,7 @@ body {
 }
 
 .padding {
-  padding: 4rem 0;
+  padding: 4.5rem 0;
 }
 
 h1 {
@@ -952,6 +952,7 @@ p {
   font-size: 1em;
   line-height: 1.5em;
   font-family: "Source Sans Pro Regular", sans-serif;
+  margin-bottom: 0;
 }
 
 .heading {
@@ -959,9 +960,9 @@ p {
 }
 
 .heading span {
-  font-family: "Montserrat Semibold", sans-serif;
+  font-family: "Source Sans Pro Semibold", sans-serif;
   text-transform: uppercase;
   color: #75c6fd;
-  margin-bottom: 8px;
+  margin-bottom: 1rem;
 }
 /*# sourceMappingURL=style.css.map */
