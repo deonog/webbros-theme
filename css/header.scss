@@ -1,7 +1,14 @@
 header {
+  background: url("img/bg-illustration-2.svg");
+  background-repeat: repeat-y;
+  background-position: bottom;
+  background-size: contain;
   height: 100vh;
   width: 100%;
-  background: $lightBlue;
+  @media screen and (min-width: 992px) {
+    background-repeat: no-repeat;
+    background-position: center 0;
+  }
   h1 {
     span {
       color: $primaryColor;
@@ -10,5 +17,17 @@ header {
   }
   p {
     margin-bottom: 0;
+  }
+  .scroll-down-btn {
+    position: absolute;
+    z-index: 8;
+    bottom: 2em;
+    display: none;
+    @media (min-width: 767px) {
+      display: block;
+    }
+    svg {
+      width: 2rem;
+    }
   }
 }

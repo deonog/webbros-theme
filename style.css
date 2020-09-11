@@ -276,9 +276,19 @@ nav #menu-btn .span:last-child {
 }
 
 header {
+  background: url("img/bg-illustration-2.svg");
+  background-repeat: repeat-y;
+  background-position: bottom;
+  background-size: contain;
   height: 100vh;
   width: 100%;
-  background: #f5fbff;
+}
+
+@media screen and (min-width: 992px) {
+  header {
+    background-repeat: no-repeat;
+    background-position: center 0;
+  }
 }
 
 header h1 {
@@ -291,6 +301,23 @@ header h1 span {
 
 header p {
   margin-bottom: 0;
+}
+
+header .scroll-down-btn {
+  position: absolute;
+  z-index: 8;
+  bottom: 2em;
+  display: none;
+}
+
+@media (min-width: 767px) {
+  header .scroll-down-btn {
+    display: block;
+  }
+}
+
+header .scroll-down-btn svg {
+  width: 2rem;
 }
 
 footer {
@@ -342,6 +369,24 @@ footer .copyright-bottom ul li:first-child a {
 /*----------------------------------------*/
 /*  01. About us
 /*----------------------------------------*/
+#about-us {
+  background: url("img/bg-illustration.svg");
+  background-repeat: repeat-y;
+  background-position: center;
+  background-size: contain;
+}
+
+@media screen and (min-width: 992px) {
+  #about-us {
+    background-repeat: no-repeat;
+    background-position: right -20%;
+  }
+}
+
+#about-us .heading {
+  margin-bottom: 1rem;
+}
+
 #about-us ul {
   margin: 0;
   padding: 0;
@@ -372,16 +417,43 @@ footer .copyright-bottom ul li:first-child a {
 /*----------------------------------------*/
 /*  02. SERVICES
 /*----------------------------------------*/
+#services {
+  background: #f5fbff;
+}
+
+#services .services .col-lg-4 {
+  margin-bottom: 1.5rem;
+}
+
+#services .services .col-lg-4:last-child {
+  margin-bottom: 0;
+}
+
+@media screen and (min-width: 992px) {
+  #services .services .col-lg-4 {
+    margin-bottom: 0;
+  }
+}
+
 #services .services .col-lg-4 .service {
   background: #fff;
   border-radius: 8px;
   -webkit-box-shadow: 0 5px 10px rgba(154, 160, 185, 0.05), 0 15px 40px rgba(166, 173, 201, 0.2);
           box-shadow: 0 5px 10px rgba(154, 160, 185, 0.05), 0 15px 40px rgba(166, 173, 201, 0.2);
   padding: 2rem 2.5rem;
+  -webkit-transition: all 0.3s ease;
+  transition: all 0.3s ease;
+}
+
+#services .services .col-lg-4 .service:hover {
+  -webkit-transform: translateY(-6px);
+  transform: translateY(-6px);
+  cursor: pointer;
+  -webkit-box-shadow: 0px 4px 25px rgba(0, 0, 0, 0.1);
+  box-shadow: 0px 4px 25px rgba(0, 0, 0, 0.1);
 }
 
 #services .services .col-lg-4 .service .service-icon {
-  background: #f5fbff;
   width: 4rem;
   height: 4rem;
   border-radius: 8px;
@@ -390,6 +462,30 @@ footer .copyright-bottom ul li:first-child a {
 
 #services .services .col-lg-4 .service .service-icon i {
   font-size: 1.5em;
+}
+
+#services .services .col-lg-4 .service .icon-blue {
+  background: #f5fbff;
+}
+
+#services .services .col-lg-4 .service .icon-blue i {
+  color: #1668a0;
+}
+
+#services .services .col-lg-4 .service .icon-red {
+  background: rgba(255, 186, 186, 0.164);
+}
+
+#services .services .col-lg-4 .service .icon-red i {
+  color: #940808;
+}
+
+#services .services .col-lg-4 .service .icon-yellow {
+  background: rgba(253, 253, 165, 0.281);
+}
+
+#services .services .col-lg-4 .service .icon-yellow i {
+  color: #a3a303;
 }
 
 #services .services .col-lg-4 .service h4 {
@@ -491,30 +587,69 @@ footer .copyright-bottom ul li:first-child a {
 /*----------------------------------------*/
 /*  04. PORTFOLIO
 /*----------------------------------------*/
-#portfolio .project {
+#portfolio {
+  background: url("img/bg-illustration.svg");
+  background-repeat: repeat-y;
+  background-position: center;
+  background-size: contain;
+}
+
+@media screen and (min-width: 992px) {
+  #portfolio {
+    background-repeat: no-repeat;
+    background-position: left -10%;
+  }
+}
+
+#portfolio .projects-container .col-lg-4 {
+  margin-bottom: 1.5rem;
+}
+
+#portfolio .projects-container .col-lg-4:last-child {
+  margin-bottom: 0;
+}
+
+@media screen and (min-width: 992px) {
+  #portfolio .projects-container .col-lg-4 {
+    margin-bottom: 0;
+  }
+}
+
+#portfolio .projects-container .project {
   -webkit-box-shadow: 0 5px 10px rgba(154, 160, 185, 0.05), 0 15px 40px rgba(166, 173, 201, 0.2);
           box-shadow: 0 5px 10px rgba(154, 160, 185, 0.05), 0 15px 40px rgba(166, 173, 201, 0.2);
   overflow: hidden;
   border-radius: 8px;
   position: relative;
+  background: #fff;
+  height: 100%;
 }
 
-#portfolio .project .project .title {
+#portfolio .projects-container .project .project .title {
   color: #1a1a1a;
   text-align: center;
   margin-bottom: 10px;
 }
 
-#portfolio .project .content {
+#portfolio .projects-container .project .content {
   position: relative;
   width: 100%;
-  max-width: 400px;
   margin: auto;
   overflow: hidden;
 }
 
-#portfolio .project .content .content-overlay {
-  background: rgba(0, 0, 0, 0.7);
+#portfolio .projects-container .project .content:hover .content-details {
+  top: 50%;
+  left: 50%;
+  opacity: 1;
+}
+
+#portfolio .projects-container .project .content:hover .content-overlay {
+  opacity: 1;
+}
+
+#portfolio .projects-container .project .content .content-overlay {
+  background: #1669a0e7;
   position: absolute;
   height: 100%;
   width: 100%;
@@ -527,66 +662,65 @@ footer .copyright-bottom ul li:first-child a {
   transition: all 0.3s ease;
 }
 
-#portfolio .project .content:hover .content-overlay {
-  opacity: 1;
-}
-
-#portfolio .project .img-container {
+#portfolio .projects-container .project .content .img-container {
   padding: 2rem 2.5rem;
   width: 100%;
 }
 
-#portfolio .project .content-image {
+#portfolio .projects-container .project .content .img-container .content-image {
   width: 100%;
 }
 
-#portfolio .project .content-details {
+#portfolio .projects-container .project .content .content-details {
   position: absolute;
-  text-align: center;
-  padding-left: 1em;
-  padding-right: 1em;
+  text-align: left;
+  padding: 0 1rem;
   width: 100%;
   top: 50%;
   left: 50%;
   opacity: 0;
   -webkit-transform: translate(-50%, -50%);
   transform: translate(-50%, -50%);
-  -webkit-transition: all 0.3s ease-in-out 0s;
-  transition: all 0.3s ease-in-out 0s;
+  -webkit-transition: all 0.3s ease;
+  transition: all 0.3s ease;
 }
 
-#portfolio .project .content:hover .content-details {
-  top: 50%;
-  left: 50%;
-  opacity: 1;
+#portfolio .projects-container .project .content .content-details .project-icon {
+  background: transparent;
+  border: 2px solid #fff;
+  border-radius: 50%;
+  padding: 10px;
+  width: 2.5rem;
+  height: 2.5rem;
 }
 
-#portfolio .project .content-details h3 {
+#portfolio .projects-container .project .content .content-details .project-icon i {
   color: #fff;
-  font-weight: 500;
-  letter-spacing: 0.15em;
-  margin-bottom: 0.5em;
-  text-transform: uppercase;
 }
 
-#portfolio .project .content-details p {
+#portfolio .projects-container .project .content .content-details h4 {
   color: #fff;
-  font-size: 0.8em;
+  margin: 0.75rem 0 0.35rem 0;
 }
 
-#portfolio .project .fadeIn-bottom {
+#portfolio .projects-container .project .content .content-details p {
+  color: #fff;
+  margin-bottom: 0;
+}
+
+#portfolio .projects-container .project .content .fadeIn-bottom {
   top: 80%;
 }
 
-#portfolio .project .fadeIn-top {
+#portfolio .projects-container .project .content .fadeIn-top {
   top: 20%;
 }
 
-#portfolio .project .fadeIn-left {
+#portfolio .projects-container .project .content .fadeIn-left {
   left: 20%;
 }
 
-#portfolio .project .fadeIn-right {
+#portfolio .projects-container .project .content .fadeIn-right {
   left: 80%;
 }
 
@@ -657,6 +791,20 @@ footer .copyright-bottom ul li:first-child a {
 /*----------------------------------------*/
 /*  07. Why-Choose Section Style
 /*----------------------------------------*/
+.why-choose-section {
+  background: url("img/bg-illustration.svg");
+  background-repeat: repeat-y;
+  background-position: center;
+  background-size: contain;
+}
+
+@media screen and (min-width: 992px) {
+  .why-choose-section {
+    background-repeat: no-repeat;
+    background-position: left -20%;
+  }
+}
+
 .why-choose-section .row {
   position: relative;
 }
@@ -726,6 +874,20 @@ footer .copyright-bottom ul li:first-child a {
   margin-bottom: 20px;
 }
 
+#contact {
+  background: url("img/bg-illustration.svg");
+  background-repeat: repeat-y;
+  background-position: center;
+  background-size: contain;
+}
+
+@media screen and (min-width: 992px) {
+  #contact {
+    background-repeat: no-repeat;
+    background-position: left -20%;
+  }
+}
+
 body {
   font-size: 16px;
 }
@@ -793,7 +955,7 @@ p {
 }
 
 .heading {
-  margin-bottom: 3rem;
+  margin-bottom: 2.5rem;
 }
 
 .heading span {
