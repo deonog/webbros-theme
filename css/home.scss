@@ -16,14 +16,6 @@
 /*----------------------------------------*/
 
 #about-us {
-  background: url("img/bg-illustration.svg");
-  background-repeat: repeat-y;
-  background-position: center;
-  background-size: contain;
-  @media screen and (min-width: 992px) {
-    background-repeat: no-repeat;
-    background-position: right -20%;
-  }
   .heading {
     margin-bottom: 1rem;
   }
@@ -42,6 +34,17 @@
       display: inline-block; /* Needed to add space between the bullet and the text */
       width: 1em; /* Also needed for space (tweak if needed) */
       margin-left: -1.4em; /* Also needed for space (tweak if needed) */
+    }
+  }
+  .row {
+    .col-sm-12 {
+      margin-bottom: 2.5rem;
+      &:last-child {
+        margin-bottom: 0;
+      }
+      @media screen and (min-width: 992px) {
+        margin-bottom: 0;
+      }
     }
   }
 }
@@ -187,15 +190,6 @@
 /*----------------------------------------*/
 
 #portfolio {
-  background: url("img/bg-illustration.svg");
-  background-repeat: repeat-y;
-  background-position: center;
-  background-size: contain;
-  @media screen and (min-width: 992px) {
-    background-repeat: no-repeat;
-    background-position: left -10%;
-  }
-
   .projects-container {
     .col-lg-4 {
       margin-bottom: 1.5rem;
@@ -213,6 +207,14 @@
       position: relative;
       background: #fff;
       height: 100%;
+      transition: $transition;
+      &:hover {
+        -webkit-transform: translateY(-6px);
+        transform: translateY(-6px);
+        cursor: pointer;
+        -webkit-box-shadow: 0px 4px 25px rgba(0, 0, 0, 0.1);
+        box-shadow: 0px 4px 25px rgba(0, 0, 0, 0.1);
+      }
       .project .title {
         color: #1a1a1a;
         text-align: center;
@@ -314,17 +316,36 @@
     background: #fff;
     box-shadow: $boxShadow;
     border-radius: $borderRadius;
-    padding: $padding;
+
+    .carousel-item {
+      padding: 0 1.5rem;
+      @media screen and (max-width: 766px) {
+        min-height: 240px;
+      }
+      .blockquote {
+        width: 100%;
+        @media screen and (min-width: 992px) {
+          width: 80%;
+          margin: 0 auto;
+        }
+      }
+    }
   }
   #client-testimonial-carousel {
     min-height: 200px;
   }
-  .carousel-control i {
-    color: #303030;
-    font-size: 1.5em;
-  }
-  .carousel-control li {
-    background-color: #303030;
+
+  .carousel-control {
+    .carousel-indicators {
+      bottom: -25%;
+    }
+    i {
+      color: #303030;
+      font-size: 1.5em;
+    }
+    li {
+      background-color: #303030;
+    }
   }
 }
 
@@ -333,49 +354,37 @@
 /*----------------------------------------*/
 .stat-section {
   background: green;
-}
-
-.stat-section .single-stat {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: center;
-  -ms-flex-pack: center;
-  justify-content: center;
-}
-
-.stat-section .single-stat h1 {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  color: #fff;
-}
-
-.stat-section .single-stat .odometer-inside {
-  font-size: 52px !important;
-}
-
-.stat-section .single-stat .sub-text {
-  margin-left: 20px;
-  font-size: 18px !important;
-  font-weight: 600;
+  .single-stat {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    h1 {
+      display: -webkit-box;
+      display: -ms-flexbox;
+      display: flex;
+      -webkit-box-align: center;
+      -ms-flex-align: center;
+      align-items: center;
+      color: #fff;
+    }
+    .sub-text {
+      margin-left: 20px;
+      font-size: 18px !important;
+      font-weight: 600;
+    }
+    .odometer-inside {
+      font-size: 52px !important;
+    }
+  }
 }
 
 /*----------------------------------------*/
 /*  07. Why-Choose Section Style
 /*----------------------------------------*/
 .why-choose-section {
-  background: url("img/bg-illustration.svg");
-  background-repeat: repeat-y;
-  background-position: center;
-  background-size: contain;
-  @media screen and (min-width: 992px) {
-    background-repeat: no-repeat;
-    background-position: left -20%;
-  }
   .row {
     position: relative;
   }
@@ -436,13 +445,26 @@
   }
 }
 
+/*----------------------------------------*/
+/*  08. Contact
+/*----------------------------------------*/
+
 #contact {
-  background: url("img/bg-illustration.svg");
-  background-repeat: repeat-y;
-  background-position: center;
-  background-size: contain;
-  @media screen and (min-width: 992px) {
-    background-repeat: no-repeat;
-    background-position: left -20%;
+  .form-container {
+    font-family: $montserratRegular;
+    label {
+      color: $black;
+    }
+    input[type="text"],
+    input[type="email"],
+    input[type="tel"],
+    textarea {
+      background: $lightBlue;
+      border: none;
+    }
+    .btn {
+      margin-top: 1rem;
+      float: right;
+    }
   }
 }
