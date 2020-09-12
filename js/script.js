@@ -72,6 +72,23 @@ scrollLinks.forEach((link) => {
   });
 });
 
+// Dynamic Carousel
+
+$(document).ready(function () {
+  for (let j = 0; j < document.querySelectorAll(".carousel-item").length; j++) {
+    $(
+      '<li data-target="#client-testimonial-carousel" data-slide-to="' +
+        j +
+        '"></li>'
+    ).appendTo(".carousel-indicators");
+  }
+  $(".carousel-item").first().addClass("active");
+  $(".carousel-indicators > li").first().addClass("active");
+  $("#carousel").carousel();
+});
+
+// Form Validation
+
 +(function (a) {
   "use strict";
   function b(b) {

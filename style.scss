@@ -46,24 +46,49 @@ h6 {
   font-family: $montserratMedium;
   color: $black;
 }
+
 h2 {
   font-size: 2em;
 }
+
 h3 {
   font-size: 2em;
 }
+
 h4 {
   font-size: 1.3em;
 }
+
+.heading {
+  font-family: $montserratSemibold;
+  margin-bottom: 2.5rem;
+  span {
+    font-family: $sourceSansSemibold;
+    text-transform: uppercase;
+    color: $secondaryColor;
+    margin-bottom: 1rem;
+  }
+}
+
+p {
+  font-size: 1em;
+  line-height: 1.5em;
+  font-family: $sourceSansRegular;
+  margin-bottom: 0;
+}
+
+/* BUTTONS */
+
 .btn {
   font-size: 0.9em;
   font-family: $montserratMedium;
   text-transform: uppercase;
   margin-top: 2rem;
 }
+
 .btn-primary {
-  background: $actionColor;
-  border: 1px solid $actionColor;
+  background: $actionColor !important;
+  border: 1px solid $actionColor !important;
 }
 
 .btn-secondary {
@@ -78,19 +103,25 @@ h4 {
   font-size: 0.9em;
 }
 
-p {
-  font-size: 1em;
-  line-height: 1.5em;
-  font-family: $sourceSansRegular;
-  margin-bottom: 0;
+.bg-left {
+  background: url("img/bg-illustration.svg");
+  background-repeat: repeat-y;
+  background-position: center;
+  background-size: contain;
+  @media screen and (min-width: 992px) {
+    background-repeat: no-repeat;
+    background-position: left;
+    background-size: 50%;
+  }
 }
-.heading {
-  font-family: $montserratSemibold;
-  margin-bottom: 2.5rem;
-  span {
-    font-family: $sourceSansSemibold;
-    text-transform: uppercase;
-    color: $secondaryColor;
-    margin-bottom: 1rem;
+.bg-right {
+  background: url("img/bg-illustration.svg");
+  background-repeat: repeat-y;
+  background-position: center;
+  background-size: contain;
+  @media screen and (min-width: 992px) {
+    background-repeat: no-repeat;
+    background-position: right;
+    background-size: 50%;
   }
 }
