@@ -21,7 +21,7 @@ header {
   }
   .scroll-down-btn {
     position: absolute;
-    z-index: 8;
+    z-index: 1;
     bottom: 2em;
     display: none;
     @media (min-width: 767px) {

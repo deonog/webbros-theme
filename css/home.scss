@@ -82,27 +82,12 @@
           height: 4rem;
           border-radius: 8px;
           margin-bottom: 1rem;
-          i {
-            font-size: 1.5em;
+          img {
+            height: 2rem;
           }
-        }
-        .icon-blue {
-          background: $lightBlue;
-          i {
-            color: $actionColor;
-          }
-        }
-        .icon-red {
-          background: rgba(255, 186, 186, 0.164);
-          i {
-            color: rgb(148, 8, 8);
-          }
-        }
-        .icon-yellow {
-          background: rgba(253, 253, 165, 0.281);
-          i {
-            color: rgb(163, 163, 3);
-          }
+          // i {
+          //   font-size: 1.5em;
+          // }
         }
         h4 {
           margin-bottom: 0.5rem;
@@ -112,6 +97,37 @@
         }
       }
     }
+  }
+}
+
+.service-icon {
+  width: 4rem;
+  height: 4rem;
+  border-radius: 8px;
+  margin-bottom: 1rem;
+  img {
+    height: 2rem;
+  }
+  // i {
+  //   font-size: 1.5em;
+  // }
+}
+.icon-blue {
+  background: $lightBlue;
+  i {
+    color: $actionColor;
+  }
+}
+.icon-red {
+  background: rgba(255, 186, 186, 0.164);
+  i {
+    color: rgb(148, 8, 8);
+  }
+}
+.icon-yellow {
+  background: rgba(253, 253, 165, 0.281);
+  i {
+    color: rgb(163, 163, 3);
   }
 }
 
@@ -353,14 +369,25 @@
 /*  06. Stat Section Style
 /*----------------------------------------*/
 .stat-section {
-  background: green;
+  background: $lightBlue;
+  .col-lg-3 {
+    margin-bottom: 1.5rem;
+    @media screen and (min-width: 992px) {
+      margin-bottom: 0;
+    }
+  }
   .single-stat {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
     -webkit-box-pack: center;
     -ms-flex-pack: center;
-    justify-content: center;
+    justify-content: start;
+    padding-left: 1.5rem;
+    @media screen and (min-width: 767px) {
+      justify-content: center;
+      padding-left: 0;
+    }
     h1 {
       display: -webkit-box;
       display: -ms-flexbox;
@@ -368,7 +395,8 @@
       -webkit-box-align: center;
       -ms-flex-align: center;
       align-items: center;
-      color: #fff;
+      color: $primaryColor;
+      margin-bottom: 0;
     }
     .sub-text {
       margin-left: 20px;
@@ -388,19 +416,25 @@
   .row {
     position: relative;
   }
+  .heading {
+    margin-bottom: 1rem;
+  }
 
   .single-why {
     background: #fff;
-    border-radius: 3px;
-    border: 1px solid #e2eaf6;
-    padding: 20px;
+    border-radius: $borderRadius;
+    padding: $padding;
     transition: $transition;
     margin-bottom: 2rem;
+    box-shadow: $boxShadow;
+    .service-icon {
+      margin-bottom: 0;
+    }
     h4 {
-      margin: 20px 0;
+      margin: 1rem 0 0 0;
     }
 
-    @media (min-width: 991px) {
+    @media (min-width: 992px) {
       margin-bottom: 0;
     }
   }
@@ -450,21 +484,59 @@
 /*----------------------------------------*/
 
 #contact {
-  .form-container {
-    font-family: $montserratRegular;
-    label {
-      color: $black;
-    }
-    input[type="text"],
-    input[type="email"],
-    input[type="tel"],
-    textarea {
-      background: $lightBlue;
-      border: none;
-    }
-    .btn {
-      margin-top: 1rem;
-      float: right;
+  .container {
+    .row {
+      &:last-child {
+        .col-sm-12 {
+          margin-bottom: 2rem;
+          @media screen and (min-width: 992px) {
+            margin-bottom: 0;
+          }
+          &:last-child {
+            margin-bottom: 0;
+          }
+        }
+      }
+      .form-container {
+        font-family: $montserratRegular;
+        label {
+          color: $black;
+        }
+        input[type="text"],
+        input[type="email"],
+        input[type="tel"],
+        textarea {
+          background: $lightBlue;
+          border: none;
+        }
+        .btn {
+          margin-top: 1rem;
+          float: right;
+        }
+      }
+      .contact-info {
+        margin-top: 2rem;
+        a {
+          display: flex;
+          align-items: center;
+          margin-bottom: 1rem;
+          &:hover {
+            text-decoration: none;
+          }
+          &:last-child {
+            margin-bottom: 0;
+          }
+          span {
+            font-family: $montserratRegular;
+            color: $black;
+            font-size: 1em;
+          }
+          img {
+            width: 1.5rem;
+            margin-right: 0.5rem;
+          }
+        }
+      }
     }
   }
 }
