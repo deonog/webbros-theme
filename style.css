@@ -418,10 +418,6 @@ footer .copyright-bottom ul li:first-child a {
 /*----------------------------------------*/
 /*  02. SERVICES
 /*----------------------------------------*/
-#services {
-  background: #f5fbff;
-}
-
 #services .services .col-lg-4 {
   margin-bottom: 1.5rem;
 }
@@ -791,6 +787,16 @@ footer .copyright-bottom ul li:first-child a {
   background: #f5fbff;
 }
 
+.stat-section .row {
+  padding-left: 20%;
+}
+
+@media screen and (min-width: 767px) {
+  .stat-section .row {
+    padding-left: 0;
+  }
+}
+
 .stat-section .col-lg-3 {
   margin-bottom: 1.5rem;
 }
@@ -808,7 +814,6 @@ footer .copyright-bottom ul li:first-child a {
   -webkit-box-pack: center;
   -ms-flex-pack: center;
   justify-content: start;
-  padding-left: 1.5rem;
 }
 
 @media screen and (min-width: 767px) {
@@ -1045,6 +1050,7 @@ p {
   line-height: 1.5em;
   font-family: "Source Sans Pro Regular", sans-serif;
   margin-bottom: 0;
+  color: #3f3f3f;
 }
 
 /* BUTTONS */
