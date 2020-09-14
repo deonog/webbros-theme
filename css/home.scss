@@ -72,9 +72,6 @@
         &:hover {
           -webkit-transform: translateY(-6px);
           transform: translateY(-6px);
-          cursor: pointer;
-          -webkit-box-shadow: 0px 4px 25px rgba(0, 0, 0, 0.1);
-          box-shadow: 0px 4px 25px rgba(0, 0, 0, 0.1);
         }
         .service-icon {
           width: 4rem;
@@ -326,28 +323,19 @@
 /*----------------------------------------*/
 
 #testimonials {
+  padding: 4.5rem 0 7.5rem 0;
   background: $bgColor;
   .testimonials-container {
-    background: #fff;
     box-shadow: $boxShadow;
     border-radius: $borderRadius;
-
+    background: #fff;
     .carousel-item {
-      padding: 0 1.5rem;
-      @media screen and (max-width: 766px) {
-        min-height: 240px;
-      }
+      height: 280px;
       .blockquote {
+        margin-bottom: 0;
         width: 100%;
-        @media screen and (min-width: 992px) {
-          width: 80%;
-          margin: 0 auto;
-        }
       }
     }
-  }
-  #client-testimonial-carousel {
-    min-height: 200px;
   }
 
   .carousel-control {
@@ -503,7 +491,6 @@
         }
       }
       .form-container {
-        font-family: $montserratRegular;
         label {
           color: $black;
         }
@@ -512,7 +499,7 @@
         input[type="tel"],
         textarea {
           background: $lightBlue;
-          border: none;
+          border: 1px solid rgb(236, 236, 236);
         }
         .btn {
           margin-top: 1rem;
@@ -532,7 +519,6 @@
             margin-bottom: 0;
           }
           span {
-            font-family: $montserratRegular;
             color: $black;
             font-size: 1em;
           }

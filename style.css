@@ -15,6 +15,13 @@
 /*----------------------------------------*/
 /*  01. Basics
 /*----------------------------------------*/
+/* STAATLICHES */
+@font-face {
+  font-family: "Staatliches";
+  src: url("../fonts/staatliches/Staatliches-Regular.ttf") format("truetype");
+  /* Safari, Android, iOS */
+}
+
 /* SOURCE SANS PRO */
 @font-face {
   font-family: "Source Sans Pro Regular";
@@ -445,9 +452,6 @@ footer .copyright-bottom ul li:first-child a {
 #services .services .col-lg-4 .service:hover {
   -webkit-transform: translateY(-6px);
   transform: translateY(-6px);
-  cursor: pointer;
-  -webkit-box-shadow: 0px 4px 25px rgba(0, 0, 0, 0.1);
-  box-shadow: 0px 4px 25px rgba(0, 0, 0, 0.1);
 }
 
 #services .services .col-lg-4 .service .service-icon {
@@ -732,39 +736,24 @@ footer .copyright-bottom ul li:first-child a {
 /*  05. TESTIMONIALS
 /*----------------------------------------*/
 #testimonials {
+  padding: 4.5rem 0 7.5rem 0;
   background: #f5fbff;
 }
 
 #testimonials .testimonials-container {
-  background: #fff;
   -webkit-box-shadow: 0 5px 10px rgba(154, 160, 185, 0.05), 0 15px 40px rgba(166, 173, 201, 0.2);
           box-shadow: 0 5px 10px rgba(154, 160, 185, 0.05), 0 15px 40px rgba(166, 173, 201, 0.2);
   border-radius: 8px;
+  background: #fff;
 }
 
 #testimonials .testimonials-container .carousel-item {
-  padding: 0 1.5rem;
-}
-
-@media screen and (max-width: 766px) {
-  #testimonials .testimonials-container .carousel-item {
-    min-height: 240px;
-  }
+  height: 280px;
 }
 
 #testimonials .testimonials-container .carousel-item .blockquote {
+  margin-bottom: 0;
   width: 100%;
-}
-
-@media screen and (min-width: 992px) {
-  #testimonials .testimonials-container .carousel-item .blockquote {
-    width: 80%;
-    margin: 0 auto;
-  }
-}
-
-#testimonials #client-testimonial-carousel {
-  min-height: 200px;
 }
 
 #testimonials .carousel-control .carousel-indicators {
@@ -944,10 +933,6 @@ footer .copyright-bottom ul li:first-child a {
   margin-bottom: 0;
 }
 
-#contact .container .row .form-container {
-  font-family: "Montserrat Regular", sans-serif;
-}
-
 #contact .container .row .form-container label {
   color: #303030;
 }
@@ -957,7 +942,7 @@ footer .copyright-bottom ul li:first-child a {
 #contact .container .row .form-container input[type="tel"],
 #contact .container .row .form-container textarea {
   background: #f5fbff;
-  border: none;
+  border: 1px solid #ececec;
 }
 
 #contact .container .row .form-container .btn {
@@ -988,7 +973,6 @@ footer .copyright-bottom ul li:first-child a {
 }
 
 #contact .container .row .contact-info a span {
-  font-family: "Montserrat Regular", sans-serif;
   color: #303030;
   font-size: 1em;
 }
@@ -1007,8 +991,9 @@ body {
 }
 
 h1 {
-  font-family: "Montserrat Semibold", sans-serif;
-  font-size: 2.5em;
+  font-family: "Staatliches", sans-serif;
+  letter-spacing: 2px;
+  font-size: 3em;
   color: #303030;
 }
 
@@ -1030,11 +1015,11 @@ h3 {
 }
 
 h4 {
-  font-size: 1.3em;
+  font-size: 1.2em;
 }
 
 .heading {
-  font-family: "Montserrat Semibold", sans-serif;
+  font-family: "Staatliches", sans-serif;
   margin-bottom: 2.5rem;
 }
 
@@ -1048,7 +1033,7 @@ h4 {
 p {
   font-size: 1em;
   line-height: 1.5em;
-  font-family: "Source Sans Pro Regular", sans-serif;
+  font-family: "Montserrat Medium", sans-serif;
   margin-bottom: 0;
   color: #3f3f3f;
 }
@@ -1056,7 +1041,7 @@ p {
 /* BUTTONS */
 .btn {
   font-size: 0.9em;
-  font-family: "Montserrat Medium", sans-serif;
+  font-family: "Staatliches";
   text-transform: uppercase;
   margin-top: 2rem;
 }
