@@ -1,29 +1,5 @@
-/*
-  Theme Name: Webbros Theme
-  Author: Webbros
-  Support: support@dwebbros.de
-  Description: Digital Agency Theme
-  Version: 1.0
-*/
-/*----------------------------------------*/
-/*  Table of contents
-/*----------------------------------------*/
-/*
-1. Basics
-
-*/
-/*----------------------------------------*/
-/*  01. Basics
-/*----------------------------------------*/
-/* STAATLICHES */
-@import url(/Users/deonogbuokiri/Desktop/webbros-wp/wp-content/themes/webbros-theme/css/fonts.css);
-@font-face {
-  font-family: "Staatliches";
-  src: url("../fonts/staatliches/Staatliches-Regular.ttf") format("truetype");
-  /* Safari, Android, iOS */
-}
-
 /* MONTSERRAT */
+@import url(/Users/deonogbuokiri/Desktop/webbros-wp/wp-content/themes/webbros-theme/css/fonts.css);
 @font-face {
   font-family: "Montserrat Bold";
   src: url("../fonts/montserrat/Montserrat-Bold.otf") format("truetype");
@@ -45,6 +21,13 @@
 @font-face {
   font-family: "Montserrat Medium";
   src: url("../fonts/montserrat/Montserrat-Medium.otf") format("truetype");
+  /* Safari, Android, iOS */
+}
+
+/* STAATLICHES */
+@font-face {
+  font-family: "Staatliches";
+  src: url("../fonts/staatliches/Staatliches Regular 400.ttf") format("truetype");
   /* Safari, Android, iOS */
 }
 
