@@ -5,43 +5,6 @@
   /* Safari, Android, iOS */
 }
 
-/* SOURCE SANS PRO */
-@font-face {
-  font-family: "Source Sans Pro Regular";
-  src: url("../fonts/source-sans-pro/SourceSansPro-Regular.otf") format("truetype");
-  /* Safari, Android, iOS */
-}
-
-@font-face {
-  font-family: "Source Sans Pro Light";
-  src: url("../fonts/source-sans-pro/SourceSansPro-Light.otf") format("truetype");
-  /* Safari, Android, iOS */
-}
-
-@font-face {
-  font-family: "Source Sans Pro Semibold";
-  src: url("../fonts/source-sans-pro/SourceSansPro-Semibold.otf") format("truetype");
-  /* Safari, Android, iOS */
-}
-
-@font-face {
-  font-family: "Source Sans Pro Bold";
-  src: url("../fonts/source-sans-pro/SourceSansPro-Bold.otf") format("truetype");
-  /* Safari, Android, iOS */
-}
-
-@font-face {
-  font-family: "Source Sans Pro Italic";
-  src: url("../fonts/source-sans-pro/SourceSansPro-It.otf") format("truetype");
-  /* Safari, Android, iOS */
-}
-
-@font-face {
-  font-family: "Source Sans Pro Semibold Italic";
-  src: url("../fonts/source-sans-pro/SourceSansPro-SemiboldIt.otf") format("truetype");
-  /* Safari, Android, iOS */
-}
-
 /* MONTSERRAT */
 @font-face {
   font-family: "Montserrat Bold";

@@ -18,22 +18,11 @@
 /*----------------------------------------*/
 
 @import "css/variables.scss";
-@import "css/fonts.scss";
+@import "css/fonts.css";
 @import "css/navbar.scss";
 @import "css/header.scss";
 @import "css/footer.scss";
 @import "css/home.scss";
-
-// Fonts
-$sourceSansRegular: "Source Sans Pro Regular", sans-serif;
-$sourceSansBold: "Source Sans Pro Bold", sans-serif;
-$sourceSansSemibold: "Source Sans Pro Semibold", sans-serif;
-$sourceSansLight: "Source Sans Pro Light", sans-serif;
-$sourceSansItalic: "Source Sans Pro Italic", sans-serif;
-$montserratBold: "Montserrat Bold", sans-serif;
-$montserratSemibold: "Montserrat Semibold", sans-serif;
-$montserratRegular: "Montserrat Regular", sans-serif;
-$montserratMedium: "Montserrat Medium", sans-serif;
 
 body {
   font-size: 16px;
@@ -94,7 +83,7 @@ p {
 
 .btn {
   font-size: 0.9em;
-  font-family: "Staatliches";
+  font-family: $montserratMedium;
   text-transform: uppercase;
   margin-top: 2rem;
 }
