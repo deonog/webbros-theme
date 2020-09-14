@@ -24,6 +24,17 @@
 @import "css/footer.scss";
 @import "css/home.scss";
 
+// Fonts
+$sourceSansRegular: "Source Sans Pro Regular", sans-serif;
+$sourceSansBold: "Source Sans Pro Bold", sans-serif;
+$sourceSansSemibold: "Source Sans Pro Semibold", sans-serif;
+$sourceSansLight: "Source Sans Pro Light", sans-serif;
+$sourceSansItalic: "Source Sans Pro Italic", sans-serif;
+$montserratBold: "Montserrat Bold", sans-serif;
+$montserratSemibold: "Montserrat Semibold", sans-serif;
+$montserratRegular: "Montserrat Regular", sans-serif;
+$montserratMedium: "Montserrat Medium", sans-serif;
+
 body {
   font-size: 16px;
 }
@@ -33,8 +44,9 @@ body {
 }
 
 h1 {
-  font-family: $montserratSemibold;
-  font-size: 2.5em;
+  font-family: "Staatliches", sans-serif;
+  letter-spacing: 2px;
+  font-size: 3em;
   color: $black;
 }
 
@@ -56,11 +68,11 @@ h3 {
 }
 
 h4 {
-  font-size: 1.3em;
+  font-size: 1.2em;
 }
 
 .heading {
-  font-family: $montserratSemibold;
+  font-family: "Staatliches", sans-serif;
   margin-bottom: 2.5rem;
   span {
     font-family: $sourceSansSemibold;
@@ -73,7 +85,7 @@ h4 {
 p {
   font-size: 1em;
   line-height: 1.5em;
-  font-family: $sourceSansRegular;
+  font-family: $montserratMedium;
   margin-bottom: 0;
   color: $grey;
 }
@@ -82,7 +94,7 @@ p {
 
 .btn {
   font-size: 0.9em;
-  font-family: $montserratMedium;
+  font-family: "Staatliches";
   text-transform: uppercase;
   margin-top: 2rem;
 }
