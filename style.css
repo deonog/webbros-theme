@@ -3,7 +3,7 @@ body {
 }
 
 .padding {
-  padding: 3.5rem 0;
+  padding: 3rem 0;
 }
 
 @media screen and (min-width: 992px) {
@@ -96,14 +96,14 @@ p {
 .btn-primary {
   color: #fff !important;
   background: #1668a0 !important;
-  border: 1px solid #1668a0 !important;
+  border: 2px solid #1668a0 !important;
 }
 
 .btn-primary:hover {
   opacity: 0.8;
   color: #fff !important;
   background: #1668a0 !important;
-  border: 1px solid #1668a0 !important;
+  border: 2px solid #1668a0 !important;
 }
 
 .btn-secondary {
@@ -274,27 +274,55 @@ footer ul {
   padding: 0;
 }
 
+footer ul li {
+  font-size: 1.2em;
+}
+
 footer .footer-top {
   padding: 3rem 0 2rem 0;
 }
 
 footer .footer-top .footer-widgets {
-  text-align: left;
+  text-align: center;
   margin-bottom: 2rem;
+}
+
+@media screen and (min-width: 992px) {
+  footer .footer-top .footer-widgets {
+    text-align: left;
+  }
 }
 
 footer .footer-top .footer-widgets:last-child {
   margin-bottom: 0;
 }
 
+footer .footer-top .footer-widgets .social-lists {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+@media screen and (min-width: 992px) {
+  footer .footer-top .footer-widgets .social-lists {
+    display: block;
+  }
+}
+
 footer .footer-top .footer-widgets .social-lists li {
   display: inline-block;
-  margin-bottom: 0;
-  margin-right: 2rem;
+  margin-bottom: 2rem;
 }
 
 footer .footer-top .footer-widgets .social-lists li:last-child {
-  margin-right: 0;
+  margin-bottom: 0;
 }
 
 footer .footer-top .footer-widgets .social-lists li a i {
@@ -709,7 +737,7 @@ footer .copyright-bottom ul li:first-child a {
 /*  05. TESTIMONIALS
 /*----------------------------------------*/
 #testimonials {
-  padding: 3.5rem 0 6.5rem 0;
+  padding: 3rem 0 6rem 0;
   background: #f5fbff;
 }
 
