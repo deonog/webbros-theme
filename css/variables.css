@@ -22,11 +22,4 @@
   src: url("../fonts/montserrat/Montserrat-Medium.otf") format("truetype");
   /* Safari, Android, iOS */
 }
-
-/* STAATLICHES */
-@font-face {
-  font-family: "Staatliches";
-  src: url("../fonts/staatliches/Staatliches Regular 400.ttf") format("truetype");
-  /* Safari, Android, iOS */
-}
 /*# sourceMappingURL=variables.css.map */

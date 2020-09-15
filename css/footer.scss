@@ -1,6 +1,11 @@
 footer {
   background: $bgColor;
   position: relative;
+  .logo {
+    img {
+      width: 120px;
+    }
+  }
   a {
     color: $grey;
   }

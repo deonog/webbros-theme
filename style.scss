@@ -1,9 +1,4 @@
 @import "css/variables.scss";
-@import "css/fonts.scss";
-@import "css/navbar.scss";
-@import "css/header.scss";
-@import "css/footer.scss";
-@import "css/home.scss";
 
 body {
   font-size: 16px;
@@ -131,3 +126,9 @@ li {
     font-family: $montserratRegular;
   }
 }
+
+@import "css/fonts.scss";
+@import "css/header.scss";
+@import "css/footer.scss";
+@import "css/home.scss";
+@import "css/navbar.scss";
