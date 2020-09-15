@@ -310,7 +310,10 @@
 /*----------------------------------------*/
 
 #testimonials {
-  padding: 4.5rem 0 7.5rem 0;
+  padding: 3.5rem 0 6.5rem 0;
+  @media screen and (min-width: 992px) {
+    padding: 4.5rem 0 7.5rem 0;
+  }
   background: $bgColor;
   .testimonials-container {
     box-shadow: $boxShadow;
@@ -425,8 +428,9 @@
   }
 
   .why-left-wrap {
-    max-width: 485px;
-    float: right;
+    p {
+      margin-bottom: 0;
+    }
 
     @media (max-width: 485px) {
       width: 100%;

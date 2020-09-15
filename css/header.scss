@@ -34,3 +34,14 @@
     }
   }
 }
+
+.page {
+  header {
+    background: url("img/bg-illustration-2.svg");
+    background-repeat: repeat-y;
+    background-position: bottom;
+    background-size: 100%;
+    height: 50vh;
+    width: 100%;
+  }
+}
