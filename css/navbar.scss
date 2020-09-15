@@ -5,6 +5,31 @@ nav {
   height: 4.5em;
   transition: $transition;
 
+  .logo {
+    img {
+      width: 140px;
+      @media screen and (min-width: 992px) {
+        width: 160px;
+      }
+    }
+  }
+
+  .overlay {
+    background: $grey;
+    opacity: 0.6;
+    width: 100%;
+    height: 200vh;
+    z-index: 7;
+    position: fixed;
+    display: none;
+    transition: $transition;
+  }
+
+  .overlay-visible {
+    display: block;
+    transition: $transition;
+  }
+
   .nav-header {
     width: 100%;
   }
@@ -14,7 +39,7 @@ nav {
   }
 
   .links-container {
-    background: green;
+    background: #fff;
     position: fixed;
     height: 100%;
     width: 70%;
@@ -23,27 +48,48 @@ nav {
     transform: translateX(100%);
     transition: $transition;
     z-index: 9;
+    .btn {
+      display: none;
+      @media screen and (min-width: 992px) {
+        display: block;
+      }
+    }
     ul {
       display: flex;
       flex-direction: column;
       margin: 0;
-      align-items: center;
+      align-items: start;
+      transition: $transition;
+      @media screen and (min-width: 992px) {
+        flex-direction: row;
+        align-items: center;
+      }
       li {
         display: inline-block;
+        margin-bottom: 2rem;
+        &:last-child {
+          display: inline-block;
+        }
+
         @media screen and (min-width: 992px) {
+          margin-bottom: 0;
           margin-right: 2em !important;
           &:last-child {
-            margin-right: 0 !important;
+            display: none;
           }
         }
         a {
           font-family: $montserratMedium;
           text-transform: uppercase;
           color: $black;
+          font-size: 1.6em;
+          @media screen and (min-width: 992px) {
+            font-size: 1em;
+          }
         }
-      }
-      @media screen and (min-width: 767px) {
-        flex-direction: row;
+        .active {
+          color: $primaryColor;
+        }
       }
     }
   }
@@ -55,6 +101,7 @@ nav {
   .menu-open {
     display: flex !important;
     transform: translateX(0);
+    transition: $transition;
   }
 
   #menu-btn {
@@ -159,20 +206,4 @@ nav {
   100% {
     transform: scale(1);
   }
-}
-
-.overlay {
-  background: $grey;
-  opacity: 0.6;
-  width: 100%;
-  height: 200vh;
-  z-index: 7;
-  position: fixed;
-  transition: $transition;
-  display: none;
-}
-
-.overlay-visible {
-  display: block;
-  transition: $transition;
 }
