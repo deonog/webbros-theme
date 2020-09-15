@@ -1,5 +1,6 @@
+@import "variables.scss";
 footer {
-  background: $bgColor;
+  background: $lightBlue;
   position: relative;
   .logo {
     img {
@@ -15,22 +16,33 @@ footer {
   ul {
     margin: 0;
     padding: 0;
+    li {
+      font-size: 1.2em;
+    }
   }
   .footer-top {
     padding: 3rem 0 2rem 0;
     .footer-widgets {
-      text-align: left;
+      text-align: center;
+      @media screen and (min-width: 992px) {
+        text-align: left;
+      }
       margin-bottom: 2rem;
       &:last-child {
         margin-bottom: 0;
       }
       .social-lists {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        @media screen and (min-width: 992px) {
+          display: block;
+        }
         li {
           display: inline-block;
-          margin-bottom: 0;
-          margin-right: 2rem;
+          margin-bottom: 2rem;
           &:last-child {
-            margin-right: 0;
+            margin-bottom: 0;
           }
           a {
             i {

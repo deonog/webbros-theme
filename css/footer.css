@@ -1,119 +1,123 @@
-.footer-section.home-one {
-  background: url(../img/footer-bg.jpg);
-  background-size: cover;
-  background-position: center top;
-  background-repeat: no-repeat;
+footer {
+  background: #f5fbff;
   position: relative;
 }
 
-.footer-section.home-one a,
-.footer-section.home-one h4,
-.footer-section.home-one p,
-.footer-section.home-one h1 {
-  color: #303030;
+footer .logo img {
+  width: 120px;
 }
 
-.footer-section.home-one .footer-top ul li a:hover {
-  color: #fff !important;
+footer a {
+  color: #555555;
 }
 
-.footer-section.home-one .copyright-bottom {
-  border-top: 1px solid #eee3;
+footer a:hover {
+  opacity: 0.8;
 }
 
-.footer-section.home-two {
-  background: #f6f8fc;
-  padding-top: 150px;
+footer ul {
+  margin: 0;
+  padding: 0;
 }
 
-.footer-section.home-two .footer-top ul li a:hover {
-  color: #333 !important;
+footer ul li {
+  font-size: 1.2em;
 }
 
-.footer-section.home-two .social-lists li a {
-  border-color: #333 !important;
+footer .footer-top {
+  padding: 3rem 0 2rem 0;
 }
 
-.footer-section.home-two .copyright-bottom {
-  border-top: 1px solid #ead7ff;
+footer .footer-top .footer-widgets {
+  text-align: center;
+  margin-bottom: 2rem;
 }
 
-.footer-section.home-two .copyright-bottom ul li a {
-  color: #6a7c92;
-  border-color: #6a7c92;
+@media screen and (min-width: 992px) {
+  footer .footer-top .footer-widgets {
+    text-align: left;
+  }
 }
 
-.footer-section.home-two .copyright-bottom ul li a:hover {
-  color: #621cf6 !important;
+footer .footer-top .footer-widgets:last-child {
+  margin-bottom: 0;
 }
 
-.footer-section .footer-top ul li a:hover {
-  color: #fff !important;
+footer .footer-top .footer-widgets .social-lists {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 
-.footer-section .footer-top .wiget-title,
-.footer-section .footer-top .footer-logo {
-  margin-bottom: 20px;
+@media screen and (min-width: 992px) {
+  footer .footer-top .footer-widgets .social-lists {
+    display: block;
+  }
 }
 
-.footer-section .footer-top .social-lists {
-  margin-top: 30px;
-}
-
-.footer-section .footer-top .social-lists li {
+footer .footer-top .footer-widgets .social-lists li {
   display: inline-block;
+  margin-bottom: 2rem;
 }
 
-.footer-section .footer-top .social-lists li a {
-  font-size: 14px;
-  border: 1px solid #fff;
-  padding: 8px 10px;
-  border-radius: 20px;
-  margin-right: 5px;
+footer .footer-top .footer-widgets .social-lists li:last-child {
+  margin-bottom: 0;
 }
 
-.footer-section .footer-bottom {
-  padding-bottom: 50px;
+footer .footer-top .footer-widgets .social-lists li a i {
+  font-size: 2em;
+  color: #1668a0;
 }
 
-.footer-section .footer-bottom .btn-style {
-  color: #fff;
-  padding: 0px 20px;
-  border-top-left-radius: 0px;
-  border-bottom-left-radius: 0px;
-  border-top-right-radius: 3px;
-  border-bottom-right-radius: 3px;
-  margin-left: -8px;
-  z-index: 999;
+footer .footer-top .footer-widgets p {
+  margin: 1rem 0 1.5rem 0;
 }
 
-.footer-section .copyright-bottom {
-  padding: 20px 0px;
+footer .footer-top .footer-widgets ul {
+  list-style: none;
+  padding: 0;
 }
 
-.footer-section .copyright-bottom p {
-  margin-bottom: 0px;
+footer .footer-top .footer-widgets ul li {
+  margin-bottom: 0.5rem;
 }
 
-.footer-section .copyright-bottom ul {
+footer .footer-top .footer-widgets ul li:last-child {
+  margin-bottom: 0;
+}
+
+footer .copyright-bottom {
+  padding: 1rem 0;
+  border-top: 1px solid #555555;
+}
+
+footer .copyright-bottom p {
+  font-size: 0.8em;
+}
+
+footer .copyright-bottom ul {
   text-align: right;
 }
 
-.footer-section .copyright-bottom ul li {
+footer .copyright-bottom ul li {
   display: inline-block;
+  margin-right: 1.5rem;
 }
 
-.footer-section .copyright-bottom ul li:first-child a {
+footer .copyright-bottom ul li:last-child {
+  margin-right: 0;
+}
+
+footer .copyright-bottom ul li:first-child a {
   border: none;
   margin-left: 0;
   padding-left: 0;
-}
-
-.footer-section .copyright-bottom ul li a {
-  -webkit-transition: all 0.5s ease-in-out;
-  transition: all 0.5s ease-in-out;
-  margin-left: 10px;
-  padding-left: 10px;
-  border-left: 1px solid #fff;
 }
 /*# sourceMappingURL=footer.css.map */
