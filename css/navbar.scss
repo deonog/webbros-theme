@@ -1,7 +1,7 @@
 nav {
   position: fixed;
   width: 100%;
-  z-index: 8;
+  z-index: 7;
   height: 4.5em;
   transition: $transition;
 
@@ -22,7 +22,7 @@ nav {
     right: 0;
     transform: translateX(100%);
     transition: $transition;
-    z-index: 7;
+    z-index: 9;
     ul {
       display: flex;
       flex-direction: column;
@@ -40,25 +40,10 @@ nav {
           font-family: $montserratMedium;
           text-transform: uppercase;
           color: $black;
-          padding-bottom: 3px;
-          border-bottom: 2px solid transparent;
         }
       }
       @media screen and (min-width: 767px) {
         flex-direction: row;
-      }
-    }
-    @media (min-width: 992px) {
-      .a-dark:hover {
-        color: grey;
-        text-decoration: none;
-        padding-bottom: 3px;
-      }
-
-      .a-light:hover {
-        color: white;
-        text-decoration: none;
-        padding-bottom: 3px;
       }
     }
   }
@@ -86,14 +71,6 @@ nav {
       margin-bottom: 0.25em;
       display: block;
       transition: $transition;
-    }
-
-    .span-dark {
-      background: grey;
-    }
-
-    .span-white {
-      background: white;
     }
 
     .menu-btn-open {
@@ -182,4 +159,20 @@ nav {
   100% {
     transform: scale(1);
   }
+}
+
+.overlay {
+  background: $grey;
+  opacity: 0.6;
+  width: 100%;
+  height: 200vh;
+  z-index: 7;
+  position: fixed;
+  transition: $transition;
+  display: none;
+}
+
+.overlay-visible {
+  display: block;
+  transition: $transition;
 }
