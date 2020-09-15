@@ -8,6 +8,9 @@ footer {
   }
   a {
     color: $grey;
+    &:hover {
+      opacity: 0.8;
+    }
   }
   ul {
     margin: 0;
