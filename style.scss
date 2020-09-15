@@ -1,5 +1,5 @@
 @import "css/variables.scss";
-@import "css/fonts.css";
+@import "css/fonts.scss";
 @import "css/navbar.scss";
 @import "css/header.scss";
 @import "css/footer.scss";
@@ -14,15 +14,15 @@ body {
 }
 
 h1 {
-  font-family: "Staatliches", sans-serif;
-  letter-spacing: 2px;
+  font-family: $montserratMedium;
+  letter-spacing: 1.1px;
   font-size: 3em;
   color: $black;
 }
 
 h2 {
-  font-family: "Staatliches", sans-serif;
-  letter-spacing: 2px;
+  font-family: $montserratMedium;
+  letter-spacing: 1.1px;
 }
 
 h3,
@@ -76,13 +76,25 @@ p {
 .btn-primary {
   color: #fff !important;
   background: $actionColor !important;
-  border: 1px solid $actionColor !important;
+  border: 2px solid $actionColor !important;
+  &:hover {
+    opacity: 0.8;
+    color: #fff !important;
+    background: $actionColor !important;
+    border: 2px solid $actionColor !important;
+  }
 }
 
 .btn-secondary {
   background: transparent;
   color: $actionColor;
   border: 2px $actionColor solid;
+  &:hover {
+    background: transparent;
+    color: $actionColor;
+    border: 2px $actionColor solid;
+    opacity: 0.8;
+  }
 }
 .read-more-btn {
   color: $actionColor;
@@ -111,5 +123,11 @@ p {
     background-repeat: no-repeat;
     background-position: right;
     background-size: 50%;
+  }
+}
+
+li {
+  a {
+    font-family: $montserratRegular;
   }
 }
