@@ -7,14 +7,14 @@ body {
 }
 
 h1 {
-  font-family: "Montserrat Medium", sans-serif;
+  font-family: "Montserrat Semibold", sans-serif;
   letter-spacing: 1.1px;
   font-size: 3em;
   color: #3f3c3c;
 }
 
 h2 {
-  font-family: "Montserrat Medium", sans-serif;
+  font-family: "Montserrat Semibold", sans-serif;
   letter-spacing: 1.1px;
 }
 
@@ -22,7 +22,7 @@ h3,
 h4,
 h5,
 h6 {
-  font-family: "Montserrat Medium", sans-serif;
+  font-family: "Montserrat Semibold", sans-serif;
   color: #3f3c3c;
 }
 
@@ -61,7 +61,7 @@ p {
 /* BUTTONS */
 .btn {
   font-size: 0.9em;
-  font-family: "Montserrat Medium", sans-serif;
+  font-family: "Montserrat Regular", sans-serif;
   text-transform: uppercase;
   margin-top: 2rem;
 }
@@ -69,14 +69,14 @@ p {
 .btn-primary {
   color: #fff !important;
   background: #1668a0 !important;
-  border: 2px solid #1668a0 !important;
+  border: 1px solid #1668a0 !important;
 }
 
 .btn-primary:hover {
   opacity: 0.8;
   color: #fff !important;
   background: #1668a0 !important;
-  border: 2px solid #1668a0 !important;
+  border: 1px solid #1668a0 !important;
 }
 
 .btn-secondary {
@@ -94,7 +94,7 @@ p {
 
 .read-more-btn {
   color: #1668a0;
-  font-family: "Montserrat Medium", sans-serif;
+  font-family: "Montserrat Regular", sans-serif;
   text-transform: uppercase;
   font-size: 0.9em;
 }
@@ -1033,7 +1033,7 @@ nav .links-container ul li:last-child {
 }
 
 nav .links-container ul li a {
-  font-family: "Montserrat Medium", sans-serif;
+  font-family: "Montserrat Semibold", sans-serif;
   text-transform: uppercase;
   color: #3f3c3c;
   font-size: 1.6em;
