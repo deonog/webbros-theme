@@ -16,15 +16,17 @@
 
   <body>
     <!-- NAVBAR -->
-    <div class="overlay"></div>
     <nav id="nav" class="d-flex align-items-center justify-content-between">
+      <div class="overlay"></div>
       <div class="container">
         <div class="row">
           <!-- NAV HEADER -->
           <div
             class="col nav-header d-flex align-items-center justify-content-between"
           >
-            <a href="index.html">webbros</a>
+            <a class="logo" href="index.html"
+              ><img src="img/logo.svg" alt="logo"
+            /></a>
             <div id="menu-btn">
               <span></span>
               <span></span>
@@ -33,32 +35,33 @@
           </div>
           <!-- LINKS -->
           <div class="links-container d-flex align-items-center" id="menu">
-            <ul class="d-flex flex-md-row flex-column align-items-center">
-              <li class="list-inline-item text-uppercase">
-                <a class="a-dark" href="index.html">Start</a>
+            <ul>
+              <li>
+                <a href="index.html" class="active">Start</a>
               </li>
-              <li class="list-inline-item text-uppercase">
-                <a class="a-dark" href="uberuns.html">Über Uns</a>
+              <li>
+                <a href="uberuns.html">Über Uns</a>
               </li>
-              <li class="list-inline-item text-uppercase">
-                <a class="a-dark" href="leistungen.html">Leistungen</a>
+              <li>
+                <a href="leistungen.html">Leistungen</a>
               </li>
-              <li class="list-inline-item text-uppercase">
-                <a class="a-dark" href="projekte.html">Projekte</a>
+              <li>
+                <a href="projekte.html">Projekte</a>
               </li>
-              <li class="list-inline-item text-uppercase">
-                <a class="btn btn-primary a-light" href="kontakt.html"
-                  >Jetzt anfragen</a
-                >
+              <li>
+                <a href="kontakt.html">Kontakt</a>
               </li>
             </ul>
+            <a class="btn btn-primary a-light" href="kontakt.html"
+              >Jetzt anfragen</a
+            >
           </div>
         </div>
       </div>
     </nav>
     <!-- NAVBAR END -->
 
-    <div class="wrapper portfolio"></div>
+    <div class="wrapper portfolio page"></div>
     <!-- SCROLL UP BTN -->
     <a class="scroll-link top-link" href="#home"> UP </a>
     <!-- SCROLL UP BTN END -->

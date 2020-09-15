@@ -16,15 +16,17 @@
 
   <body>
     <!-- NAVBAR -->
-    <div class="overlay"></div>
     <nav id="nav" class="d-flex align-items-center justify-content-between">
+      <div class="overlay"></div>
       <div class="container">
         <div class="row">
           <!-- NAV HEADER -->
           <div
             class="col nav-header d-flex align-items-center justify-content-between"
           >
-            <a href="index.html">webbros</a>
+            <a class="logo" href="index.html"
+              ><img src="img/logo.svg" alt="logo"
+            /></a>
             <div id="menu-btn">
               <span></span>
               <span></span>
@@ -33,32 +35,94 @@
           </div>
           <!-- LINKS -->
           <div class="links-container d-flex align-items-center" id="menu">
-            <ul class="d-flex flex-md-row flex-column align-items-center">
-              <li class="list-inline-item text-uppercase">
-                <a class="a-dark" href="index.html">Start</a>
+            <ul>
+              <li>
+                <a href="index.html" class="active">Start</a>
               </li>
-              <li class="list-inline-item text-uppercase">
-                <a class="a-dark" href="uberuns.html">Über Uns</a>
+              <li>
+                <a href="uberuns.html">Über Uns</a>
               </li>
-              <li class="list-inline-item text-uppercase">
-                <a class="a-dark" href="leistungen.html">Leistungen</a>
+              <li>
+                <a href="leistungen.html">Leistungen</a>
               </li>
-              <li class="list-inline-item text-uppercase">
-                <a class="a-dark" href="projekte.html">Projekte</a>
+              <li>
+                <a href="projekte.html">Projekte</a>
               </li>
-              <li class="list-inline-item text-uppercase">
-                <a class="btn btn-primary a-light" href="kontakt.html"
-                  >Jetzt anfragen</a
-                >
+              <li>
+                <a href="kontakt.html">Kontakt</a>
               </li>
             </ul>
+            <a class="btn btn-primary a-light" href="kontakt.html"
+              >Jetzt anfragen</a
+            >
           </div>
         </div>
       </div>
     </nav>
     <!-- NAVBAR END -->
 
-    <div class="wrapper about-us"></div>
+    <div class="wrapper about-us page">
+      <!-- HEADER -->
+      <header>
+        <div
+          class="container h-100 d-flex align-items-center justify-content-center"
+        >
+          <div class="row d-flex align-items-center justify-content-center">
+            <div
+              class="col-sm-12 col-lg-6 text-left d-lg-flex flex-column align-items-start justify-content-center"
+            >
+              <div>
+                <h1>Über Uns</h1>
+                <div>
+                  <a href="index.html">Start</a><span>–</span
+                  ><a href="">Über Uns</a>
+                </div>
+              </div>
+            </div>
+            <div
+              class="col-sm-12 col-lg-5 offset-lg-1 d-none d-sm-none d-lg-block"
+            >
+              <div>
+                <img
+                  class="img-fluid"
+                  src="img/header-illustration.svg"
+                  alt="illustration"
+                />
+              </div>
+            </div>
+          </div>
+        </div>
+      </header>
+      <!-- HEADER END -->
+
+      <!-- ABOUT US SECTION -->
+      <section id="about-us" class="padding bg-left">
+        <div class="container">
+          <div class="row d-flex align-items-center">
+            <div class="col-sm-12 col-lg-5">
+              <img
+                class="img-fluid"
+                src="img/about-illustration.svg"
+                alt="illustration"
+              />
+            </div>
+            <div class="col-sm-12 offset-lg-1 col-lg-6 text-left">
+              <div class="heading">
+                <span>Wer wir sind</span>
+                <h2>Wir sind der digitale Partner für jedes Unternehmen</h2>
+              </div>
+              <p>
+                Für (Arzt-)Praxen, Steuerbüros, Bürogemeinschaften und Berater
+                sind wir der richtige Partner mit einem pragmatischen Ansatz,
+                der Ihnen die Arbeit abnimmt und einfach zum Ziel führt.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+      <!-- ABOUT US SECTION END -->
+    </div>
+
     <!-- SCROLL UP BTN -->
     <a class="scroll-link top-link" href="#home"> UP </a>
     <!-- SCROLL UP BTN END -->
