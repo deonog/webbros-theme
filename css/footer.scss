@@ -44,6 +44,9 @@ footer {
           &:last-child {
             margin-bottom: 0;
           }
+          @media screen and (min-width: 992px) {
+            margin-right: 1.5rem;
+          }
           a {
             i {
               font-size: 2em;

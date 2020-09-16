@@ -71,6 +71,12 @@ footer .footer-top .footer-widgets .social-lists li:last-child {
   margin-bottom: 0;
 }
 
+@media screen and (min-width: 992px) {
+  footer .footer-top .footer-widgets .social-lists li {
+    margin-right: 1.5rem;
+  }
+}
+
 footer .footer-top .footer-widgets .social-lists li a i {
   font-size: 2em;
   color: #1668a0;
