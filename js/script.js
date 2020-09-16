@@ -14,8 +14,6 @@ const topLink = document.querySelector(".top-link");
 const header = document.querySelector("header");
 const hover = document.querySelector(".links-container a:hover");
 
-console.log(hover);
-
 if (header == null) {
   navbar.classList.add("fixed-nav");
 } else {
@@ -492,7 +490,7 @@ $(document).ready(function () {
         {
           scrollTop: $(hash).offset().top,
         },
-        500,
+        300,
         function () {
           // Add hash (#) to URL when done scrolling (default click behavior)
           window.location.hash = hash;
