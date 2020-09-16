@@ -1,40 +1,3 @@
-/* MONTSERRAT */
-@font-face {
-  font-family: "Montserrat Bold";
-  src: url("fonts/montserrat/Montserrat-Bold.ttf") format("truetype");
-  /* Safari, Android, iOS */
-}
-
-@font-face {
-  font-family: "Montserrat Semibold";
-  src: url("fonts/montserrat/Montserrat-SemiBold.ttf") format("truetype");
-  /* Safari, Android, iOS */
-}
-
-@font-face {
-  font-family: "Montserrat Regular";
-  src: url("fonts/montserrat/Montserrat-Regular.ttf") format("truetype");
-  /* Safari, Android, iOS */
-}
-
-@font-face {
-  font-family: "Montserrat Medium";
-  src: url("fonts/montserrat/Montserrat-Medium.ttf") format("truetype");
-  /* Safari, Android, iOS */
-}
-
-@font-face {
-  font-family: "Montserrat Medium Italic";
-  src: url("fonts/montserrat/Montserrat-MediumItalic.ttf") format("truetype");
-  /* Safari, Android, iOS */
-}
-
-@font-face {
-  font-family: "Montserrat Italic";
-  src: url("fonts/montserrat/Montserrat-Italic.ttf") format("truetype");
-  /* Safari, Android, iOS */
-}
-
 html {
   scroll-behavior: smooth !important;
 }
@@ -327,6 +290,12 @@ footer .footer-top .footer-widgets .social-lists li {
 
 footer .footer-top .footer-widgets .social-lists li:last-child {
   margin-bottom: 0;
+}
+
+@media screen and (min-width: 992px) {
+  footer .footer-top .footer-widgets .social-lists li {
+    margin-right: 1.5rem;
+  }
 }
 
 footer .footer-top .footer-widgets .social-lists li a i {
@@ -1258,5 +1227,42 @@ nav #menu-btn .span:last-child {
     -webkit-transform: scale(1);
             transform: scale(1);
   }
+}
+
+/* MONTSERRAT */
+@font-face {
+  font-family: "Montserrat Bold";
+  src: url("fonts/montserrat/Montserrat-Bold.ttf") format("truetype");
+  /* Safari, Android, iOS */
+}
+
+@font-face {
+  font-family: "Montserrat Semibold";
+  src: url("fonts/montserrat/Montserrat-SemiBold.ttf") format("truetype");
+  /* Safari, Android, iOS */
+}
+
+@font-face {
+  font-family: "Montserrat Regular";
+  src: url("fonts/montserrat/Montserrat-Regular.ttf") format("truetype");
+  /* Safari, Android, iOS */
+}
+
+@font-face {
+  font-family: "Montserrat Medium";
+  src: url("fonts/montserrat/Montserrat-Medium.ttf") format("truetype");
+  /* Safari, Android, iOS */
+}
+
+@font-face {
+  font-family: "Montserrat Medium Italic";
+  src: url("fonts/montserrat/Montserrat-MediumItalic.ttf") format("truetype");
+  /* Safari, Android, iOS */
+}
+
+@font-face {
+  font-family: "Montserrat Italic";
+  src: url("fonts/montserrat/Montserrat-Italic.ttf") format("truetype");
+  /* Safari, Android, iOS */
 }
 /*# sourceMappingURL=style.css.map */
