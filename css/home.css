@@ -400,7 +400,7 @@
 }
 
 /*----------------------------------------*/
-/*  06. Stat Section Style
+/*  06. Technologies
 /*----------------------------------------*/
 #technologies {
   background: #f5fbff;
@@ -440,13 +440,13 @@
 
 @media screen and (min-width: 992px) {
   #technologies .container .icon img {
-    -webkit-filter: grayscale(0);
-            filter: grayscale(0);
+    -webkit-filter: grayscale(100%);
+            filter: grayscale(100%);
     cursor: pointer;
   }
   #technologies .container .icon img:hover {
-    -webkit-filter: grayscale(100%);
-            filter: grayscale(100%);
+    -webkit-filter: grayscale(0);
+            filter: grayscale(0);
     cursor: default;
   }
 }

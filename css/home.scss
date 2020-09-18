@@ -344,7 +344,7 @@
 }
 
 /*----------------------------------------*/
-/*  06. Stat Section Style
+/*  06. Technologies
 /*----------------------------------------*/
 
 #technologies {
@@ -375,10 +375,10 @@
         height: 60px;
 
         @media screen and (min-width: 992px) {
-          filter: grayscale(0);
+          filter: grayscale(100%);
           cursor: pointer;
           &:hover {
-            filter: grayscale(100%);
+            filter: grayscale(0);
             cursor: default;
           }
         }
