@@ -1,29 +1,35 @@
 footer {
-  background: #f5fbff;
-  position: relative;
+  background: #1668a0;
 }
 
-footer .row {
-  padding: 1rem 0;
+footer .row .col-sm-12 {
+  margin-bottom: 2.5rem;
 }
 
-footer .row .social-lists li {
-  display: inline-block;
+footer .row .col-sm-12:last-child {
+  margin-bottom: 0;
 }
 
 @media screen and (min-width: 992px) {
-  footer .row .social-lists li {
-    margin-right: 1.5rem;
+  footer .row .col-sm-12 {
+    margin-bottom: 0;
+    margin-top: 0;
   }
 }
 
-footer .row .social-lists li a i {
-  font-size: 2em;
-  color: #1668a0;
+footer .row .col-sm-12 p {
+  font-size: 1em;
+  color: #fff;
 }
 
-footer .row p {
-  font-size: 0.8em;
+footer .row .col-sm-12 a {
+  color: #fff;
+  -webkit-transition: all 0.4s ease;
+  transition: all 0.4s ease;
+}
+
+footer .row .col-sm-12 a:hover {
+  opacity: 0.8;
 }
 
 footer .row ul {
@@ -41,11 +47,21 @@ footer .row ul li:last-child {
   margin-right: 0;
 }
 
-footer a {
-  color: #555555;
+footer .row .social-lists li {
+  display: inline-block;
 }
 
-footer a:hover {
-  opacity: 0.8;
+@media screen and (min-width: 992px) {
+  footer .row .social-lists li {
+    margin-right: 2rem;
+  }
+  footer .row .social-lists li:last-child {
+    margin-right: 0;
+  }
+}
+
+footer .row .social-lists li a i {
+  font-size: 2em;
+  color: #fff;
 }
 /*# sourceMappingURL=footer.css.map */

@@ -16,6 +16,16 @@ body {
   }
 }
 
+.padding-2 {
+  padding: 1.5rem 0;
+}
+
+@media screen and (min-width: 992px) {
+  .padding-2 {
+    padding: 2.25rem 0;
+  }
+}
+
 h1 {
   font-family: "Montserrat Semibold", sans-serif;
   color: #3f3c3c;
@@ -57,7 +67,13 @@ h4 {
 }
 
 .heading {
-  margin-bottom: 2.5rem;
+  margin-bottom: 2rem;
+}
+
+@media screen and (min-width: 992px) {
+  .heading {
+    margin-bottom: 2.5rem;
+  }
 }
 
 .heading span {
@@ -80,6 +96,10 @@ p {
   font-family: "Montserrat Regular", sans-serif;
   margin-bottom: 0;
   color: #555555;
+}
+
+a:hover {
+  text-decoration: none;
 }
 
 /* BUTTONS */
@@ -112,6 +132,8 @@ p {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
+  -webkit-transition: all 0.4s ease;
+  transition: all 0.4s ease;
 }
 
 .btn-primary {
@@ -274,31 +296,37 @@ li a {
 }
 
 footer {
-  background: #f5fbff;
-  position: relative;
+  background: #1668a0;
 }
 
-footer .row {
-  padding: 1rem 0;
+footer .row .col-sm-12 {
+  margin-bottom: 2.5rem;
 }
 
-footer .row .social-lists li {
-  display: inline-block;
+footer .row .col-sm-12:last-child {
+  margin-bottom: 0;
 }
 
 @media screen and (min-width: 992px) {
-  footer .row .social-lists li {
-    margin-right: 1.5rem;
+  footer .row .col-sm-12 {
+    margin-bottom: 0;
+    margin-top: 0;
   }
 }
 
-footer .row .social-lists li a i {
-  font-size: 2em;
-  color: #1668a0;
+footer .row .col-sm-12 p {
+  font-size: 1em;
+  color: #fff;
 }
 
-footer .row p {
-  font-size: 0.8em;
+footer .row .col-sm-12 a {
+  color: #fff;
+  -webkit-transition: all 0.4s ease;
+  transition: all 0.4s ease;
+}
+
+footer .row .col-sm-12 a:hover {
+  opacity: 0.8;
 }
 
 footer .row ul {
@@ -316,12 +344,22 @@ footer .row ul li:last-child {
   margin-right: 0;
 }
 
-footer a {
-  color: #555555;
+footer .row .social-lists li {
+  display: inline-block;
 }
 
-footer a:hover {
-  opacity: 0.8;
+@media screen and (min-width: 992px) {
+  footer .row .social-lists li {
+    margin-right: 2rem;
+  }
+  footer .row .social-lists li:last-child {
+    margin-right: 0;
+  }
+}
+
+footer .row .social-lists li a i {
+  font-size: 2em;
+  color: #fff;
 }
 
 /*----------------------------------------*/
@@ -728,57 +766,53 @@ footer a:hover {
 /*----------------------------------------*/
 /*  06. Stat Section Style
 /*----------------------------------------*/
-.stat-section {
+#technologies {
   background: #f5fbff;
 }
 
-.stat-section .col-lg-3 {
+#technologies .container .col-12 {
   margin-bottom: 1.5rem;
 }
 
-@media screen and (min-width: 992px) {
-  .stat-section .col-lg-3 {
-    margin-bottom: 0;
-  }
-}
-
-.stat-section .single-stat {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: center;
-  -ms-flex-pack: center;
-  justify-content: start;
-}
-
-@media screen and (min-width: 767px) {
-  .stat-section .single-stat {
-    -webkit-box-pack: center;
-        -ms-flex-pack: center;
-            justify-content: center;
-    padding-left: 0;
-  }
-}
-
-.stat-section .single-stat h1 {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  color: #46b3e6;
+#technologies .container .col-12 h4 {
   margin-bottom: 0;
 }
 
-.stat-section .single-stat .sub-text {
-  margin-left: 20px;
-  font-size: 18px !important;
-  font-weight: 600;
+#technologies .container .col-sm-12 {
+  margin-bottom: 1.5rem;
 }
 
-.stat-section .single-stat .odometer-inside {
-  font-size: 52px !important;
+#technologies .container .col-sm-12:last-child {
+  margin-bottom: 0;
+  margin-top: 0.5rem;
+}
+
+@media screen and (min-width: 767px) {
+  #technologies .container .col-sm-12 {
+    margin-bottom: 0;
+    margin-top: 0;
+  }
+}
+
+#technologies .container .icon img {
+  margin: 0 auto;
+  text-align: center;
+  -webkit-transition: all 0.4s ease;
+  transition: all 0.4s ease;
+  height: 60px;
+}
+
+@media screen and (min-width: 992px) {
+  #technologies .container .icon img {
+    -webkit-filter: grayscale(0);
+            filter: grayscale(0);
+    cursor: pointer;
+  }
+  #technologies .container .icon img:hover {
+    -webkit-filter: grayscale(100%);
+            filter: grayscale(100%);
+    cursor: default;
+  }
 }
 
 /*----------------------------------------*/
