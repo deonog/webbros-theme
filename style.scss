@@ -40,11 +40,8 @@ h6 {
 }
 
 h2 {
-  font-size: 1.7em;
-  @media screen and (min-width: 992px) {
-    letter-spacing: 1.1px;
-    font-size: 2em;
-  }
+  font-size: 2em;
+  letter-spacing: 1.1px;
 }
 
 h3 {
@@ -56,7 +53,6 @@ h4 {
 }
 
 .heading {
-  font-family: $staatliches;
   margin-bottom: 2.5rem;
   span {
     font-family: $montserratSemibold;
@@ -80,11 +76,27 @@ p {
 
 /* BUTTONS */
 
+.btn-container {
+  a {
+    margin-right: 1rem;
+    width: 50%;
+    @media screen and (min-width: 992px) {
+      width: auto;
+    }
+    &:last-child {
+      margin-right: 0;
+    }
+  }
+}
+
 .btn {
   font-size: 0.9em;
   font-family: $montserratRegular;
   text-transform: uppercase;
   margin-top: 2rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .btn-primary {
@@ -146,8 +158,8 @@ li {
   }
 }
 
+@import "css/fonts.scss";
 @import "css/header.scss";
 @import "css/footer.scss";
 @import "css/home.scss";
 @import "css/navbar.scss";
-@import "css/fonts.scss";
