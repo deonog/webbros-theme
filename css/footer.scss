@@ -1,25 +1,27 @@
 @import "variables.scss";
 footer {
-  background: $lightBlue;
-  position: relative;
+  background: $actionColor;
   .row {
-    padding: 1rem 0;
-    .social-lists {
-      li {
-        display: inline-block;
-        @media screen and (min-width: 992px) {
-          margin-right: 1.5rem;
-        }
-        a {
-          i {
-            font-size: 2em;
-            color: $actionColor;
-          }
+    .col-sm-12 {
+      margin-bottom: 2.5rem;
+      &:last-child {
+        margin-bottom: 0;
+      }
+      @media screen and (min-width: 992px) {
+        margin-bottom: 0;
+        margin-top: 0;
+      }
+      p {
+        font-size: 1em;
+        color: #fff;
+      }
+      a {
+        color: #fff;
+        transition: $transition;
+        &:hover {
+          opacity: 0.8;
         }
       }
-    }
-    p {
-      font-size: 0.8em;
     }
     ul {
       margin: 0;
@@ -33,12 +35,22 @@ footer {
         }
       }
     }
-  }
-
-  a {
-    color: $grey;
-    &:hover {
-      opacity: 0.8;
+    .social-lists {
+      li {
+        display: inline-block;
+        @media screen and (min-width: 992px) {
+          margin-right: 2rem;
+          &:last-child {
+            margin-right: 0;
+          }
+        }
+        a {
+          i {
+            font-size: 2em;
+            color: #fff;
+          }
+        }
+      }
     }
   }
 }

@@ -402,90 +402,53 @@
 /*----------------------------------------*/
 /*  06. Stat Section Style
 /*----------------------------------------*/
-.stat-section {
+#technologies {
   background: #f5fbff;
 }
 
-.stat-section .project .technologies .icons {
-  display: -ms-grid;
-  display: grid;
-  -ms-grid-columns: 1fr 1fr;
-      grid-template-columns: 1fr 1fr;
-  grid-row-gap: 2rem;
-}
-
-.stat-section .project .technologies .icons .icon {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-}
-
-.stat-section .project .technologies .icons img:hover {
-  -webkit-filter: grayscale(0);
-          filter: grayscale(0);
-  cursor: default;
-}
-
-.stat-section .project .technologies .icons .icon img {
-  width: 100%;
-  max-width: 60px;
-  margin: 0 auto;
-  text-align: center;
-}
-
-.stat-section .col-lg-3 {
+#technologies .container .col-12 {
   margin-bottom: 1.5rem;
 }
 
-@media screen and (min-width: 992px) {
-  .stat-section .col-lg-3 {
-    margin-bottom: 0;
-  }
-}
-
-.stat-section .single-stat {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: center;
-  -ms-flex-pack: center;
-  justify-content: start;
-}
-
-@media screen and (min-width: 767px) {
-  .stat-section .single-stat {
-    -webkit-box-pack: center;
-        -ms-flex-pack: center;
-            justify-content: center;
-    padding-left: 0;
-  }
-}
-
-.stat-section .single-stat h1 {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  color: #46b3e6;
+#technologies .container .col-12 h4 {
   margin-bottom: 0;
 }
 
-.stat-section .single-stat .sub-text {
-  margin-left: 20px;
-  font-size: 18px !important;
-  font-weight: 600;
+#technologies .container .col-sm-12 {
+  margin-bottom: 1.5rem;
 }
 
-.stat-section .single-stat .odometer-inside {
-  font-size: 52px !important;
+#technologies .container .col-sm-12:last-child {
+  margin-bottom: 0;
+  margin-top: 0.5rem;
+}
+
+@media screen and (min-width: 767px) {
+  #technologies .container .col-sm-12 {
+    margin-bottom: 0;
+    margin-top: 0;
+  }
+}
+
+#technologies .container .icon img {
+  margin: 0 auto;
+  text-align: center;
+  -webkit-transition: all 0.4s ease;
+  transition: all 0.4s ease;
+  height: 60px;
+}
+
+@media screen and (min-width: 992px) {
+  #technologies .container .icon img {
+    -webkit-filter: grayscale(0);
+            filter: grayscale(0);
+    cursor: pointer;
+  }
+  #technologies .container .icon img:hover {
+    -webkit-filter: grayscale(100%);
+            filter: grayscale(100%);
+    cursor: default;
+  }
 }
 
 /*----------------------------------------*/

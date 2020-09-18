@@ -346,67 +346,43 @@
 /*----------------------------------------*/
 /*  06. Stat Section Style
 /*----------------------------------------*/
-.stat-section {
-  .project .technologies .icons {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    grid-row-gap: 2rem;
-  }
 
-  .project .technologies .icons .icon {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-  }
-
-  .project .technologies .icons img:hover {
-    filter: grayscale(0);
-    cursor: default;
-  }
-
-  .project .technologies .icons .icon img {
-    width: 100%;
-    max-width: 60px;
-    margin: 0 auto;
-    text-align: center;
-  }
-
+#technologies {
   background: $lightBlue;
-  .col-lg-3 {
-    margin-bottom: 1.5rem;
-    @media screen and (min-width: 992px) {
-      margin-bottom: 0;
+  .container {
+    .col-12 {
+      margin-bottom: 1.5rem;
+      h4 {
+        margin-bottom: 0;
+      }
     }
-  }
-  .single-stat {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-pack: center;
-    -ms-flex-pack: center;
-    justify-content: start;
+    .col-sm-12 {
+      margin-bottom: 1.5rem;
+      &:last-child {
+        margin-bottom: 0;
+        margin-top: 0.5rem;
+      }
+      @media screen and (min-width: 767px) {
+        margin-bottom: 0;
+        margin-top: 0;
+      }
+    }
+    .icon {
+      img {
+        margin: 0 auto;
+        text-align: center;
+        transition: $transition;
+        height: 60px;
 
-    @media screen and (min-width: 767px) {
-      justify-content: center;
-      padding-left: 0;
-    }
-    h1 {
-      display: -webkit-box;
-      display: -ms-flexbox;
-      display: flex;
-      -webkit-box-align: center;
-      -ms-flex-align: center;
-      align-items: center;
-      color: $primaryColor;
-      margin-bottom: 0;
-    }
-    .sub-text {
-      margin-left: 20px;
-      font-size: 18px !important;
-      font-weight: 600;
-    }
-    .odometer-inside {
-      font-size: 52px !important;
+        @media screen and (min-width: 992px) {
+          filter: grayscale(0);
+          cursor: pointer;
+          &:hover {
+            filter: grayscale(100%);
+            cursor: default;
+          }
+        }
+      }
     }
   }
 }
