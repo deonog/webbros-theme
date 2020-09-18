@@ -406,14 +406,37 @@
   background: #f5fbff;
 }
 
-.stat-section .row {
-  padding-left: 20%;
+.stat-section .project .technologies .icons {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 1fr 1fr;
+      grid-template-columns: 1fr 1fr;
+  grid-row-gap: 2rem;
 }
 
-@media screen and (min-width: 767px) {
-  .stat-section .row {
-    padding-left: 0;
-  }
+.stat-section .project .technologies .icons .icon {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.stat-section .project .technologies .icons img:hover {
+  -webkit-filter: grayscale(0);
+          filter: grayscale(0);
+  cursor: default;
+}
+
+.stat-section .project .technologies .icons .icon img {
+  width: 100%;
+  max-width: 60px;
+  margin: 0 auto;
+  text-align: center;
 }
 
 .stat-section .col-lg-3 {
@@ -546,7 +569,7 @@
 /*  08. Contact
 /*----------------------------------------*/
 #contact .container .row:last-child .col-sm-12 {
-  margin-bottom: 2rem;
+  margin-bottom: 2.5rem;
 }
 
 @media screen and (min-width: 992px) {
