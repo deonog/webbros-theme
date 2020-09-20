@@ -295,6 +295,21 @@ li a {
   width: 100%;
 }
 
+.page header .header-breadcrumb span {
+  color: #3f3c3c;
+  margin: 0 0.5rem;
+}
+
+.page header .header-breadcrumb a {
+  font-family: "Montserrat Regular", sans-serif;
+  color: #3f3c3c;
+}
+
+.page header .header-breadcrumb .breadcrumb-active {
+  color: #46b3e6;
+  font-family: "Montserrat Semibold", sans-serif;
+}
+
 footer {
   background: #1668a0;
 }
@@ -500,7 +515,7 @@ footer .row .social-lists li a i {
 /*  03. ROADMAP
 /*----------------------------------------*/
 #roadmap {
-  display: none;
+  background: #f5fbff;
 }
 
 #roadmap .roadmap .line {

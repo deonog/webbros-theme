@@ -136,7 +136,7 @@
 /*  03. ROADMAP
 /*----------------------------------------*/
 #roadmap {
-  display: none;
+  background: #f5fbff;
 }
 
 #roadmap .roadmap .line {
