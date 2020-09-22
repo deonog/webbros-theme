@@ -14,7 +14,18 @@
     <link rel="stylesheet" href="style.css" />
   </head>
 
-  <body>
+  <body id="home">
+    <!-- Start Pre-loader -->
+    <div class="pre-loader-wrap">
+      <div class="pre-loader triangle">
+        <svg viewBox="0 0 86 80">
+          <polygon points="43 8 79 72 7 72"></polygon>
+        </svg>
+        <span>Lädt...</span>
+      </div>
+    </div>
+    <!-- End Pre-loader -->
+
     <!-- NAVBAR -->
     <nav id="nav" class="d-flex align-items-center justify-content-between">
       <div class="overlay"></div>
@@ -413,7 +424,7 @@
                 <div class="card-body">
                   <h4 class="card-title text-muted text-uppercase text-center">
                     Individuell
-                  </h45>
+                  </h4>
                   <h6 class="card-price text-center">499,99€</h6>
                   <hr />
                   <ul class="fa-ul">
@@ -674,7 +685,12 @@
     <!-- FOOTER END -->
 
     <!-- SCROLL UP BTN -->
-    <a class="scroll-link top-link" href="#home"> UP </a>
+    <a
+      class="scroll-link top-link d-flex align-items-center justify-content-center"
+      href="#home"
+    >
+      <i class="fas fa-caret-up"></i>
+    </a>
     <!-- SCROLL UP BTN END -->
 
     <script src="js/jquery.js"></script>
