@@ -218,7 +218,7 @@ li a {
 }
 
 /*----------------------------------------*/
-/*  3. Pre-loader
+/*  Pre-loader
 /*----------------------------------------*/
 .pre-loader-wrap {
   background-color: #fff;
@@ -230,16 +230,21 @@ li a {
   top: 0;
 }
 
-.pre-loader {
+.pre-loader-wrap .pre-loader {
   --path: #1668a0;
   --dot: #2f3545;
   --duration: 3s;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  -webkit-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
   width: 44px;
   height: 44px;
   position: relative;
 }
 
-.pre-loader:before {
+.pre-loader-wrap .pre-loader:before {
   content: "";
   width: 6px;
   height: 6px;
@@ -255,20 +260,14 @@ li a {
   animation: dotRect var(--duration) cubic-bezier(0.785, 0.135, 0.15, 0.86) infinite;
 }
 
-.pre-loader span {
+.pre-loader-wrap .pre-loader span {
   display: block;
   margin-top: 10px;
 }
 
-.pre-loader svg {
-  display: block;
-  width: 100%;
-  height: 100%;
-}
-
-.pre-loader svg rect,
-.pre-loader svg polygon,
-.pre-loader svg circle {
+.pre-loader-wrap .pre-loader svg rect,
+.pre-loader-wrap .pre-loader svg polygon,
+.pre-loader-wrap .pre-loader svg circle {
   fill: none;
   stroke: var(--path);
   stroke-width: 10px;
@@ -276,32 +275,32 @@ li a {
   stroke-linecap: round;
 }
 
-.pre-loader svg polygon {
+.pre-loader-wrap .pre-loader svg polygon {
   stroke-dasharray: 145 76 145 76;
   stroke-dashoffset: 0;
   -webkit-animation: pathTriangle var(--duration) cubic-bezier(0.785, 0.135, 0.15, 0.86) infinite;
   animation: pathTriangle var(--duration) cubic-bezier(0.785, 0.135, 0.15, 0.86) infinite;
 }
 
-.pre-loader svg rect {
+.pre-loader-wrap .pre-loader svg rect {
   stroke-dasharray: 192 64 192 64;
   stroke-dashoffset: 0;
   -webkit-animation: pathRect 3s cubic-bezier(0.785, 0.135, 0.15, 0.86) infinite;
   animation: pathRect 3s cubic-bezier(0.785, 0.135, 0.15, 0.86) infinite;
 }
 
-.pre-loader svg circle {
+.pre-loader-wrap .pre-loader svg circle {
   stroke-dasharray: 150 50 150 50;
   stroke-dashoffset: 75;
   -webkit-animation: pathCircle var(--duration) cubic-bezier(0.785, 0.135, 0.15, 0.86) infinite;
   animation: pathCircle var(--duration) cubic-bezier(0.785, 0.135, 0.15, 0.86) infinite;
 }
 
-.pre-loader.triangle {
+.pre-loader-wrap .pre-loader .triangle {
   width: 48px;
 }
 
-.pre-loader.triangle:before {
+.pre-loader-wrap .pre-loader .triangle:before {
   left: 21px;
   -webkit-transform: translate(-10px, -18px);
   transform: translate(-10px, -18px);
@@ -461,14 +460,6 @@ li a {
   }
 }
 
-.pre-loader {
-  position: absolute;
-  left: 50%;
-  top: 50%;
-  -webkit-transform: translate(-50%, -50%);
-  transform: translate(-50%, -50%);
-}
-
 /* MONTSERRAT */
 @font-face {
   font-family: "Montserrat Bold";
@@ -557,8 +548,14 @@ li a {
   background-repeat: repeat-y;
   background-position: bottom;
   background-size: 100%;
-  height: 50vh;
+  height: 40vh;
   width: 100%;
+}
+
+@media screen and (min-width: 992px) {
+  .page header {
+    height: 50vh;
+  }
 }
 
 .page header .header-breadcrumb span {
@@ -720,7 +717,7 @@ footer .row .social-lists li a i {
 
 #services .services .col-lg-4 .service:hover {
   -webkit-transform: translateY(-6px);
-  transform: translateY(-6px);
+          transform: translateY(-6px);
 }
 
 #services .services .col-lg-4 .service .service-icon {
@@ -739,7 +736,15 @@ footer .row .social-lists li a i {
 }
 
 #services .services .col-lg-4 .service p {
-  margin-bottom: 0.75rem;
+  margin-bottom: 0.3rem;
+}
+
+#services .services .col-lg-4 .service p:last-child {
+  margin-bottom: 0;
+}
+
+#services .services .col-lg-4 .service .read-more-btn {
+  margin-top: 0.4rem;
 }
 
 .service-icon {
@@ -850,6 +855,11 @@ footer .row .social-lists li a i {
       align-self: center;
 }
 
+#roadmap .roadmap .roadmap-content h2 {
+  color: #46b3e6;
+  margin-right: 0.4rem;
+}
+
 #roadmap .roadmap .roadmap-img {
   -ms-grid-row: 2;
   -ms-grid-column: 2;
@@ -882,6 +892,39 @@ footer .row .social-lists li a i {
   }
 }
 
+#portfolio .projects-container .tabs-list a {
+  display: block;
+  padding: 0.5em;
+  cursor: pointer;
+  border-radius: 4px;
+  -webkit-transition: all 0.4s ease;
+  transition: all 0.4s ease;
+  width: 100%;
+}
+
+#portfolio .projects-container .tabs-list a:last-child {
+  margin-bottom: 0;
+}
+
+#portfolio .projects-container .tabs-list a:hover {
+  background: #1668a0;
+  color: #fff;
+}
+
+@media screen and (min-width: 992px) {
+  #portfolio .projects-container .tabs-list a {
+    margin-right: 1rem;
+  }
+  #portfolio .projects-container .tabs-list a:last-child {
+    margin-right: 0;
+  }
+}
+
+#portfolio .projects-container .tabs-list .tab-active {
+  background: #1668a0;
+  color: #fff !important;
+}
+
 #portfolio .projects-container .project {
   -webkit-box-shadow: 0 5px 10px rgba(154, 160, 185, 0.05), 0 15px 40px rgba(166, 173, 201, 0.2);
           box-shadow: 0 5px 10px rgba(154, 160, 185, 0.05), 0 15px 40px rgba(166, 173, 201, 0.2);
@@ -896,7 +939,7 @@ footer .row .social-lists li a i {
 
 #portfolio .projects-container .project:hover {
   -webkit-transform: translateY(-6px);
-  transform: translateY(-6px);
+          transform: translateY(-6px);
   cursor: pointer;
   -webkit-box-shadow: 0px 4px 25px rgba(0, 0, 0, 0.1);
   box-shadow: 0px 4px 25px rgba(0, 0, 0, 0.1);
@@ -1001,28 +1044,10 @@ footer .row .social-lists li a i {
   left: 80%;
 }
 
-.tabs-list a {
-  display: block;
-  padding: 0.5em;
-  cursor: pointer;
-  border-radius: 4px;
-  -webkit-transition: all 0.4s ease;
-  transition: all 0.4s ease;
-  width: 100%;
-}
-
-.tabs-list a:last-child {
-  margin-bottom: 0;
-}
-
-.tabs-list a:hover {
-  background: #1668a0;
-  color: #fff;
-}
-
-.tabs-list .orange-underline {
-  background: #1668a0;
-  color: #fff !important;
+@media screen and (min-width: 992px) {
+  .projects #portfolio .col-lg-6 {
+    margin-bottom: 2rem;
+  }
 }
 
 /*----------------------------------------*/
@@ -1052,10 +1077,6 @@ footer .row .social-lists li a i {
 #testimonials .testimonials-container .carousel-item .blockquote {
   margin-bottom: 0;
   width: 100%;
-}
-
-#testimonials #testimonials {
-  background: #fff !important;
 }
 
 #testimonials .carousel-control .carousel-indicators {
@@ -1109,14 +1130,11 @@ footer .row .social-lists li a i {
   -webkit-transition: all 0.4s ease;
   transition: all 0.4s ease;
   height: 60px;
+  -webkit-filter: grayscale(100%);
+          filter: grayscale(100%);
 }
 
 @media screen and (min-width: 992px) {
-  #technologies .container .icon img {
-    -webkit-filter: grayscale(100%);
-            filter: grayscale(100%);
-    cursor: pointer;
-  }
   #technologies .container .icon img:hover {
     -webkit-filter: grayscale(0);
             filter: grayscale(0);
@@ -1162,7 +1180,7 @@ footer .row .social-lists li a i {
 
 .why-choose-section .single-why:hover {
   -webkit-transform: translateY(-6px);
-  transform: translateY(-6px);
+          transform: translateY(-6px);
 }
 
 .why-choose-section .why-left-wrap p {
@@ -1273,18 +1291,18 @@ footer .row .social-lists li a i {
 #pricing .card {
   border: none;
   border-radius: 1rem;
-  -webkit-transition: all 0.2s;
-  transition: all 0.2s;
+  -webkit-transition: all 0.4s ease;
+  transition: all 0.4s ease;
   -webkit-box-shadow: 0 5px 10px rgba(154, 160, 185, 0.05), 0 15px 40px rgba(166, 173, 201, 0.2);
           box-shadow: 0 5px 10px rgba(154, 160, 185, 0.05), 0 15px 40px rgba(166, 173, 201, 0.2);
 }
 
 @media screen and (min-width: 992px) {
   #pricing .card:hover {
-    margin-top: -0.25rem;
-    margin-bottom: 0.25rem;
-    -webkit-box-shadow: 0 0.5rem 1rem 0 rgba(0, 0, 0, 0.3);
-            box-shadow: 0 0.5rem 1rem 0 rgba(0, 0, 0, 0.3);
+    -webkit-transition: all 0.4s ease;
+    transition: all 0.4s ease;
+    -webkit-transform: translateY(-6px);
+            transform: translateY(-6px);
   }
 }
 
@@ -1294,6 +1312,10 @@ footer .row .social-lists li a i {
 
 #pricing .card .card-price ul li {
   margin-bottom: 1rem;
+}
+
+#pricing .card h4 {
+  color: #46b3e6;
 }
 
 #pricing .card .text-muted {
@@ -1311,10 +1333,22 @@ footer .row .social-lists li a i {
   background: #f5fbff;
 }
 
+#banner h3 {
+  margin-bottom: 1rem;
+}
+
+#banner .btn {
+  margin-top: 1.4rem;
+}
+
+.contact #contact {
+  height: 90vh;
+}
+
 nav {
   position: fixed;
   width: 100%;
-  z-index: 7;
+  z-index: 20;
   height: 4.5em;
   -webkit-transition: all 0.4s ease;
   transition: all 0.4s ease;
@@ -1340,7 +1374,7 @@ nav .overlay {
   opacity: 0.6;
   width: 100%;
   height: 200vh;
-  z-index: 7;
+  z-index: 20;
   position: fixed;
   display: none;
   -webkit-transition: all 0.4s ease;
@@ -1384,7 +1418,7 @@ nav .links-container {
           transform: translateX(100%);
   -webkit-transition: all 0.4s ease;
   transition: all 0.4s ease;
-  z-index: 9;
+  z-index: 22;
 }
 
 nav .links-container .btn {
@@ -1449,6 +1483,12 @@ nav .links-container ul li a {
   text-transform: uppercase;
   color: #3f3c3c;
   font-size: 1.6em;
+  -webkit-transition: all 0.4s ease;
+  transition: all 0.4s ease;
+}
+
+nav .links-container ul li a:hover {
+  color: #46b3e6;
 }
 
 @media screen and (min-width: 992px) {
@@ -1479,7 +1519,7 @@ nav #menu-btn {
   display: block;
   cursor: pointer;
   position: relative;
-  z-index: 20;
+  z-index: 25;
   -webkit-transition: all 0.4s ease;
   transition: all 0.4s ease;
 }
@@ -1543,7 +1583,7 @@ nav #menu-btn .span:last-child {
   background: white;
   -webkit-box-shadow: 0 5px 10px rgba(154, 160, 185, 0.05), 0 15px 40px rgba(166, 173, 201, 0.2);
           box-shadow: 0 5px 10px rgba(154, 160, 185, 0.05), 0 15px 40px rgba(166, 173, 201, 0.2);
-  z-index: 4;
+  z-index: 20;
 }
 
 .top-link {
@@ -1559,7 +1599,7 @@ nav #menu-btn .span:last-child {
   -webkit-animation: bounce 3s ease-in-out infinite;
           animation: bounce 3s ease-in-out infinite;
   visibility: hidden;
-  z-index: -100;
+  z-index: -4;
 }
 
 .top-link i {
@@ -1569,7 +1609,7 @@ nav #menu-btn .span:last-child {
 
 .show-link {
   visibility: visible;
-  z-index: 100;
+  z-index: 4;
 }
 
 @-webkit-keyframes bounce {

@@ -27,7 +27,7 @@ if (header == null) {
     }
     // setup back to top link
 
-    if (scrollHeight > 500) {
+    if (scrollHeight > 300) {
       topLink.classList.add("show-link");
     } else {
       topLink.classList.remove("show-link");
@@ -498,8 +498,8 @@ $(document).ready(function () {
     }
 
     if ($(this)) {
-      $(this).addClass("orange-underline");
-      $(".tabs-list a").not(this).removeClass("orange-underline");
+      $(this).addClass("tab-active");
+      $(".tabs-list a").not(this).removeClass("tab-active");
     }
   });
 });
