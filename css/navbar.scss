@@ -24,11 +24,17 @@ nav {
     position: fixed;
     display: none;
     transition: $transition;
+    @media screen and (min-width: 992px) {
+      display: none;
+    }
   }
 
   .overlay-visible {
     display: block;
     transition: $transition;
+    @media screen and (min-width: 992px) {
+      display: none;
+    }
   }
 
   .nav-header {
@@ -113,7 +119,7 @@ nav {
     transition: $transition;
 
     span {
-      background: grey;
+      background: $black;
       width: 32px;
       height: 4px;
       margin-bottom: 0.25em;
