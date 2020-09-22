@@ -81,7 +81,7 @@ h6 {
 }
 
 .heading {
-  margin-bottom: 2rem;
+  margin-bottom: 2rem !important;
 }
 
 @media screen and (min-width: 992px) {
@@ -999,6 +999,30 @@ footer .row .social-lists li a i {
 
 #portfolio .projects-container .project .content .fadeIn-right {
   left: 80%;
+}
+
+.tabs-list a {
+  display: block;
+  padding: 0.5em;
+  cursor: pointer;
+  border-radius: 4px;
+  -webkit-transition: all 0.4s ease;
+  transition: all 0.4s ease;
+  width: 100%;
+}
+
+.tabs-list a:last-child {
+  margin-bottom: 0;
+}
+
+.tabs-list a:hover {
+  background: #1668a0;
+  color: #fff;
+}
+
+.tabs-list .orange-underline {
+  background: #1668a0;
+  color: #fff !important;
 }
 
 /*----------------------------------------*/

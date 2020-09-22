@@ -306,6 +306,28 @@
   }
 }
 
+.tabs-list {
+  a {
+    display: block;
+    padding: 0.5em;
+    cursor: pointer;
+    border-radius: 4px;
+    transition: $transition;
+    width: 100%;
+    &:last-child {
+      margin-bottom: 0;
+    }
+    &:hover {
+      background: $actionColor;
+      color: #fff;
+    }
+  }
+  .orange-underline {
+    background: $actionColor;
+    color: #fff !important;
+  }
+}
+
 /*----------------------------------------*/
 /*  05. TESTIMONIALS
 /*----------------------------------------*/
