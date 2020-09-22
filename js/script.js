@@ -480,3 +480,26 @@ $(window).on("load", function () {
     $(".pre-loader-wrap").fadeOut("slow");
   }
 });
+
+/* Reference section active links */
+
+$(document).ready(function () {
+  $(".tabs-list a").click(function () {
+    var filterValue = $(this).attr("data-filter");
+    if (filterValue == "cat-all") {
+      $(".cat-all").show();
+    } else {
+      $(".cat-all")
+        .not("." + filterValue)
+        .hide();
+      $(".cat-all")
+        .filter("." + filterValue)
+        .show();
+    }
+
+    if ($(this)) {
+      $(this).addClass("orange-underline");
+      $(".tabs-list a").not(this).removeClass("orange-underline");
+    }
+  });
+});
