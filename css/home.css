@@ -223,16 +223,16 @@
 /*----------------------------------------*/
 /*  04. PORTFOLIO
 /*----------------------------------------*/
-#portfolio .projects-container .col-lg-4 {
+#portfolio .projects-container .col-sm-12 {
   margin-bottom: 1.5rem;
 }
 
-#portfolio .projects-container .col-lg-4:last-child {
+#portfolio .projects-container .col-sm-12:last-child {
   margin-bottom: 0;
 }
 
 @media screen and (min-width: 992px) {
-  #portfolio .projects-container .col-lg-4 {
+  #portfolio .projects-container .col-sm-12 {
     margin-bottom: 0;
   }
 }
@@ -361,7 +361,6 @@
 /*----------------------------------------*/
 #testimonials {
   padding: 3rem 0 6rem 0;
-  background: #f5fbff;
 }
 
 @media screen and (min-width: 992px) {
@@ -384,6 +383,10 @@
 #testimonials .testimonials-container .carousel-item .blockquote {
   margin-bottom: 0;
   width: 100%;
+}
+
+#testimonials #testimonials {
+  background: #fff !important;
 }
 
 #testimonials .carousel-control .carousel-indicators {
@@ -595,13 +598,16 @@
   margin-right: 0.5rem;
 }
 
+/*----------------------------------------*/
+/*  09. PRICING
+/*----------------------------------------*/
 #pricing .card {
   border: none;
   border-radius: 1rem;
   -webkit-transition: all 0.2s;
   transition: all 0.2s;
-  -webkit-box-shadow: 0 0.5rem 1rem 0 rgba(0, 0, 0, 0.1);
-          box-shadow: 0 0.5rem 1rem 0 rgba(0, 0, 0, 0.1);
+  -webkit-box-shadow: 0 5px 10px rgba(154, 160, 185, 0.05), 0 15px 40px rgba(166, 173, 201, 0.2);
+          box-shadow: 0 5px 10px rgba(154, 160, 185, 0.05), 0 15px 40px rgba(166, 173, 201, 0.2);
 }
 
 @media screen and (min-width: 992px) {
@@ -613,20 +619,8 @@
   }
 }
 
-#pricing .card .card-title {
-  margin: 0.5rem 0;
-  font-size: 0.9rem;
-  letter-spacing: 0.1rem;
-  font-weight: bold;
-}
-
 #pricing .card .card-price {
-  font-size: 3rem;
   margin: 0;
-}
-
-#pricing .card .card-price .period {
-  font-size: 0.8rem;
 }
 
 #pricing .card .card-price ul li {
@@ -639,5 +633,12 @@
 
 #pricing hr {
   margin: 1.5rem 0;
+}
+
+/*----------------------------------------*/
+/*  10. BANNER
+/*----------------------------------------*/
+#banner {
+  background: #f5fbff;
 }
 /*# sourceMappingURL=home.css.map */
