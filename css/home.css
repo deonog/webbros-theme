@@ -1,8 +1,251 @@
 /*----------------------------------------*/
+/*  01. Pre-loader
+/*----------------------------------------*/
+.pre-loader-wrap {
+  background-color: #fff;
+  z-index: 9999;
+  position: fixed;
+  height: 100%;
+  width: 100%;
+  left: 0;
+  top: 0;
+}
+
+.pre-loader-wrap .pre-loader {
+  --path: #1668a0;
+  --dot: #2f3545;
+  --duration: 3s;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  -webkit-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+  width: 44px;
+  height: 44px;
+  position: relative;
+}
+
+.pre-loader-wrap .pre-loader:before {
+  content: "";
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  position: absolute;
+  display: block;
+  background: var(--dot);
+  top: 37px;
+  left: 19px;
+  -webkit-transform: translate(-18px, -18px);
+  transform: translate(-18px, -18px);
+  -webkit-animation: dotRect var(--duration) cubic-bezier(0.785, 0.135, 0.15, 0.86) infinite;
+  animation: dotRect var(--duration) cubic-bezier(0.785, 0.135, 0.15, 0.86) infinite;
+}
+
+.pre-loader-wrap .pre-loader span {
+  display: block;
+  margin-top: 10px;
+}
+
+.pre-loader-wrap .pre-loader svg rect,
+.pre-loader-wrap .pre-loader svg polygon,
+.pre-loader-wrap .pre-loader svg circle {
+  fill: none;
+  stroke: var(--path);
+  stroke-width: 10px;
+  stroke-linejoin: round;
+  stroke-linecap: round;
+}
+
+.pre-loader-wrap .pre-loader svg polygon {
+  stroke-dasharray: 145 76 145 76;
+  stroke-dashoffset: 0;
+  -webkit-animation: pathTriangle var(--duration) cubic-bezier(0.785, 0.135, 0.15, 0.86) infinite;
+  animation: pathTriangle var(--duration) cubic-bezier(0.785, 0.135, 0.15, 0.86) infinite;
+}
+
+.pre-loader-wrap .pre-loader svg rect {
+  stroke-dasharray: 192 64 192 64;
+  stroke-dashoffset: 0;
+  -webkit-animation: pathRect 3s cubic-bezier(0.785, 0.135, 0.15, 0.86) infinite;
+  animation: pathRect 3s cubic-bezier(0.785, 0.135, 0.15, 0.86) infinite;
+}
+
+.pre-loader-wrap .pre-loader svg circle {
+  stroke-dasharray: 150 50 150 50;
+  stroke-dashoffset: 75;
+  -webkit-animation: pathCircle var(--duration) cubic-bezier(0.785, 0.135, 0.15, 0.86) infinite;
+  animation: pathCircle var(--duration) cubic-bezier(0.785, 0.135, 0.15, 0.86) infinite;
+}
+
+.pre-loader-wrap .pre-loader .triangle {
+  width: 48px;
+}
+
+.pre-loader-wrap .pre-loader .triangle:before {
+  left: 21px;
+  -webkit-transform: translate(-10px, -18px);
+  transform: translate(-10px, -18px);
+  -webkit-animation: dotTriangle var(--duration) cubic-bezier(0.785, 0.135, 0.15, 0.86) infinite;
+  animation: dotTriangle var(--duration) cubic-bezier(0.785, 0.135, 0.15, 0.86) infinite;
+}
+
+@-webkit-keyframes pathTriangle {
+  33% {
+    stroke-dashoffset: 74;
+  }
+  66% {
+    stroke-dashoffset: 147;
+  }
+  100% {
+    stroke-dashoffset: 221;
+  }
+}
+
+@keyframes pathTriangle {
+  33% {
+    stroke-dashoffset: 74;
+  }
+  66% {
+    stroke-dashoffset: 147;
+  }
+  100% {
+    stroke-dashoffset: 221;
+  }
+}
+
+@-webkit-keyframes dotTriangle {
+  33% {
+    -webkit-transform: translate(0, 0);
+    transform: translate(0, 0);
+  }
+  66% {
+    -webkit-transform: translate(10px, -18px);
+    transform: translate(10px, -18px);
+  }
+  100% {
+    -webkit-transform: translate(-10px, -18px);
+    transform: translate(-10px, -18px);
+  }
+}
+
+@keyframes dotTriangle {
+  33% {
+    -webkit-transform: translate(0, 0);
+    transform: translate(0, 0);
+  }
+  66% {
+    -webkit-transform: translate(10px, -18px);
+    transform: translate(10px, -18px);
+  }
+  100% {
+    -webkit-transform: translate(-10px, -18px);
+    transform: translate(-10px, -18px);
+  }
+}
+
+@-webkit-keyframes pathRect {
+  25% {
+    stroke-dashoffset: 64;
+  }
+  50% {
+    stroke-dashoffset: 128;
+  }
+  75% {
+    stroke-dashoffset: 192;
+  }
+  100% {
+    stroke-dashoffset: 256;
+  }
+}
+
+@keyframes pathRect {
+  25% {
+    stroke-dashoffset: 64;
+  }
+  50% {
+    stroke-dashoffset: 128;
+  }
+  75% {
+    stroke-dashoffset: 192;
+  }
+  100% {
+    stroke-dashoffset: 256;
+  }
+}
+
+@-webkit-keyframes dotRect {
+  25% {
+    -webkit-transform: translate(0, 0);
+    transform: translate(0, 0);
+  }
+  50% {
+    -webkit-transform: translate(18px, -18px);
+    transform: translate(18px, -18px);
+  }
+  75% {
+    -webkit-transform: translate(0, -36px);
+    transform: translate(0, -36px);
+  }
+  100% {
+    -webkit-transform: translate(-18px, -18px);
+    transform: translate(-18px, -18px);
+  }
+}
+
+@keyframes dotRect {
+  25% {
+    -webkit-transform: translate(0, 0);
+    transform: translate(0, 0);
+  }
+  50% {
+    -webkit-transform: translate(18px, -18px);
+    transform: translate(18px, -18px);
+  }
+  75% {
+    -webkit-transform: translate(0, -36px);
+    transform: translate(0, -36px);
+  }
+  100% {
+    -webkit-transform: translate(-18px, -18px);
+    transform: translate(-18px, -18px);
+  }
+}
+
+@-webkit-keyframes pathCircle {
+  25% {
+    stroke-dashoffset: 125;
+  }
+  50% {
+    stroke-dashoffset: 175;
+  }
+  75% {
+    stroke-dashoffset: 225;
+  }
+  100% {
+    stroke-dashoffset: 275;
+  }
+}
+
+@keyframes pathCircle {
+  25% {
+    stroke-dashoffset: 125;
+  }
+  50% {
+    stroke-dashoffset: 175;
+  }
+  75% {
+    stroke-dashoffset: 225;
+  }
+  100% {
+    stroke-dashoffset: 275;
+  }
+}
+
+/*----------------------------------------*/
 /*  01. About us
 /*----------------------------------------*/
 #about-us .heading {
-  margin-bottom: 1rem;
+  margin-bottom: 0.75rem;
 }
 
 #about-us ul {
@@ -43,6 +286,20 @@
 @media screen and (min-width: 992px) {
   #about-us .row .col-sm-12 {
     margin-bottom: 0;
+  }
+}
+
+#about-us .flex-column-reverse .col-sm-12 {
+  margin-top: 2.5rem;
+}
+
+#about-us .flex-column-reverse .col-sm-12:last-child {
+  margin-top: 0;
+}
+
+@media screen and (min-width: 992px) {
+  #about-us .flex-column-reverse .col-sm-12 {
+    margin-top: 0;
   }
 }
 
@@ -211,6 +468,13 @@
   -ms-flex-item-align: center;
       -ms-grid-row-align: center;
       align-self: center;
+  padding-top: 1rem;
+}
+
+@media screen and (min-width: 992px) {
+  #roadmap .roadmap .roadmap-content {
+    padding-top: 0;
+  }
 }
 
 #roadmap .roadmap .roadmap-content h2 {
@@ -224,6 +488,13 @@
   grid-area: c;
   -ms-grid-column-align: center;
       justify-self: center;
+  padding-bottom: 1rem;
+}
+
+@media screen and (min-width: 992px) {
+  #roadmap .roadmap .roadmap-img {
+    padding-bottom: 0;
+  }
 }
 
 @media screen and (min-width: 992px) {
@@ -236,16 +507,16 @@
 /*----------------------------------------*/
 /*  04. PORTFOLIO
 /*----------------------------------------*/
-#portfolio .projects-container .col-sm-12 {
+#portfolio .projects-container .d-flex .col-sm-12 {
   margin-bottom: 1.5rem;
 }
 
-#portfolio .projects-container .col-sm-12:last-child {
+#portfolio .projects-container .d-flex .col-sm-12:last-child {
   margin-bottom: 0;
 }
 
 @media screen and (min-width: 992px) {
-  #portfolio .projects-container .col-sm-12 {
+  #portfolio .projects-container .d-flex .col-sm-12 {
     margin-bottom: 0;
   }
 }
@@ -508,7 +779,7 @@
 }
 
 .why-choose-section .heading {
-  margin-bottom: 1rem;
+  margin-bottom: 0.75rem;
 }
 
 .why-choose-section .single-why {
@@ -646,7 +917,15 @@
 /*----------------------------------------*/
 /*  09. PRICING
 /*----------------------------------------*/
-#pricing .card {
+#pricing .col-lg-4 {
+  margin-bottom: 2rem;
+}
+
+#pricing .col-lg-4:last-child {
+  margin-bottom: 0;
+}
+
+#pricing .col-lg-4 .card {
   border: none;
   border-radius: 1rem;
   -webkit-transition: all 0.4s ease;
@@ -656,7 +935,7 @@
 }
 
 @media screen and (min-width: 992px) {
-  #pricing .card:hover {
+  #pricing .col-lg-4 .card:hover {
     -webkit-transition: all 0.4s ease;
     transition: all 0.4s ease;
     -webkit-transform: translateY(-6px);
@@ -664,24 +943,30 @@
   }
 }
 
-#pricing .card .card-price {
+#pricing .col-lg-4 .card .card-price {
   margin: 0;
 }
 
-#pricing .card .card-price ul li {
+#pricing .col-lg-4 .card .card-price ul li {
   margin-bottom: 1rem;
 }
 
-#pricing .card h4 {
+#pricing .col-lg-4 .card h4 {
   color: #46b3e6;
 }
 
-#pricing .card .text-muted {
+#pricing .col-lg-4 .card .text-muted {
   opacity: 0.7;
 }
 
-#pricing hr {
+#pricing .col-lg-4 .card hr {
   margin: 1.5rem 0;
+}
+
+@media screen and (min-width: 992px) {
+  #pricing .col-lg-4 {
+    margin-bottom: 0;
+  }
 }
 
 /*----------------------------------------*/
@@ -692,11 +977,11 @@
 }
 
 #banner h3 {
-  margin-bottom: 1rem;
+  margin-bottom: 0.75rem;
 }
 
 #banner .btn {
-  margin-top: 1.4rem;
+  margin-top: 1.15rem;
 }
 
 .contact #contact {
