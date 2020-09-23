@@ -159,9 +159,6 @@ nav {
       background: transparent;
       transform: translateX(0);
       width: auto;
-      //   ul li:nth-last-child(-n + 2) {
-      //     display: none;
-      //   }
     }
 
     .nav-header {
@@ -193,7 +190,7 @@ nav {
   right: 3rem;
   width: 2rem;
   height: 2rem;
-  background: $actionColor;
+  background: $primaryColor;
   place-items: center;
   border-radius: $borderRadius;
   animation: bounce 3s ease-in-out infinite;
