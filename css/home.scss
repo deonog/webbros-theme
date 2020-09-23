@@ -467,16 +467,33 @@
 /*  04. PORTFOLIO
 /*----------------------------------------*/
 
+.home {
+  #portfolio {
+    h2 {
+      margin-bottom: 0;
+    }
+  }
+}
+
 #portfolio {
   .projects-container {
-    .d-flex {
-      .col-sm-12 {
-        margin-bottom: 1.5rem;
-        &:last-child {
-          margin-bottom: 0;
-        }
+    .row {
+      &:first-child {
+        margin-bottom: 2rem;
+
         @media screen and (min-width: 992px) {
           margin-bottom: 0;
+        }
+      }
+      &:last-child {
+        .col-sm-12 {
+          margin-bottom: 1.5rem;
+          &:last-child {
+            margin-bottom: 0;
+          }
+          @media screen and (min-width: 992px) {
+            margin-bottom: 0;
+          }
         }
       }
     }
@@ -618,8 +635,12 @@
 @media screen and (min-width: 992px) {
   .projects {
     #portfolio {
+      padding: 1.5rem 0 1rem 0;
+      @media screen and (min-width: 992px) {
+        padding: 2.25rem 0 2.5rem 0;
+      }
       .col-lg-6 {
-        margin-bottom: 2rem;
+        margin-bottom: 2rem !important;
       }
     }
   }

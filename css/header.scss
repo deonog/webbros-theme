@@ -33,6 +33,33 @@
         width: 2rem;
       }
     }
+    .header-social {
+      position: absolute;
+      bottom: 0;
+      left: 5%;
+      div {
+        display: block;
+        width: 2px;
+        height: 3rem;
+        background: $actionColor;
+      }
+      .social-lists {
+        li {
+          display: inline-block;
+          margin-bottom: 0.75rem;
+          &:last-child {
+            margin-bottom: 0.2rem;
+          }
+          a {
+            i {
+              font-size: 1.3em;
+              color: $actionColor;
+              transform: rotate(270deg);
+            }
+          }
+        }
+      }
+    }
   }
 }
 

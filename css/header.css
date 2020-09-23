@@ -44,6 +44,35 @@
   width: 2rem;
 }
 
+.home header .header-social {
+  position: absolute;
+  bottom: 0;
+  left: 5%;
+}
+
+.home header .header-social div {
+  display: block;
+  width: 2px;
+  height: 3rem;
+  background: #1668a0;
+}
+
+.home header .header-social .social-lists li {
+  display: inline-block;
+  margin-bottom: 0.75rem;
+}
+
+.home header .header-social .social-lists li:last-child {
+  margin-bottom: 0.2rem;
+}
+
+.home header .header-social .social-lists li a i {
+  font-size: 1.3em;
+  color: #1668a0;
+  -webkit-transform: rotate(270deg);
+          transform: rotate(270deg);
+}
+
 .page header {
   background: url("img/bg-illustration-2.svg");
   background-repeat: repeat-y;

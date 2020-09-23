@@ -300,6 +300,35 @@ li a {
   width: 2rem;
 }
 
+.home header .header-social {
+  position: absolute;
+  bottom: 0;
+  left: 5%;
+}
+
+.home header .header-social div {
+  display: block;
+  width: 2px;
+  height: 3rem;
+  background: #1668a0;
+}
+
+.home header .header-social .social-lists li {
+  display: inline-block;
+  margin-bottom: 0.75rem;
+}
+
+.home header .header-social .social-lists li:last-child {
+  margin-bottom: 0.2rem;
+}
+
+.home header .header-social .social-lists li a i {
+  font-size: 1.3em;
+  color: #1668a0;
+  -webkit-transform: rotate(270deg);
+          transform: rotate(270deg);
+}
+
 .page header {
   background: url("img/bg-illustration-2.svg");
   background-repeat: repeat-y;
@@ -907,16 +936,30 @@ footer .row .social-lists li a i {
 /*----------------------------------------*/
 /*  04. PORTFOLIO
 /*----------------------------------------*/
-#portfolio .projects-container .d-flex .col-sm-12 {
+.home #portfolio h2 {
+  margin-bottom: 0;
+}
+
+#portfolio .projects-container .row:first-child {
+  margin-bottom: 2rem;
+}
+
+@media screen and (min-width: 992px) {
+  #portfolio .projects-container .row:first-child {
+    margin-bottom: 0;
+  }
+}
+
+#portfolio .projects-container .row:last-child .col-sm-12 {
   margin-bottom: 1.5rem;
 }
 
-#portfolio .projects-container .d-flex .col-sm-12:last-child {
+#portfolio .projects-container .row:last-child .col-sm-12:last-child {
   margin-bottom: 0;
 }
 
 @media screen and (min-width: 992px) {
-  #portfolio .projects-container .d-flex .col-sm-12 {
+  #portfolio .projects-container .row:last-child .col-sm-12 {
     margin-bottom: 0;
   }
 }
@@ -1074,8 +1117,20 @@ footer .row .social-lists li a i {
 }
 
 @media screen and (min-width: 992px) {
+  .projects #portfolio {
+    padding: 1.5rem 0 1rem 0;
+  }
+}
+
+@media screen and (min-width: 992px) and (min-width: 992px) {
+  .projects #portfolio {
+    padding: 2.25rem 0 2.5rem 0;
+  }
+}
+
+@media screen and (min-width: 992px) {
   .projects #portfolio .col-lg-6 {
-    margin-bottom: 2rem;
+    margin-bottom: 2rem !important;
   }
 }
 

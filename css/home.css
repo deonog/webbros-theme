@@ -507,16 +507,30 @@
 /*----------------------------------------*/
 /*  04. PORTFOLIO
 /*----------------------------------------*/
-#portfolio .projects-container .d-flex .col-sm-12 {
+.home #portfolio h2 {
+  margin-bottom: 0;
+}
+
+#portfolio .projects-container .row:first-child {
+  margin-bottom: 2rem;
+}
+
+@media screen and (min-width: 992px) {
+  #portfolio .projects-container .row:first-child {
+    margin-bottom: 0;
+  }
+}
+
+#portfolio .projects-container .row:last-child .col-sm-12 {
   margin-bottom: 1.5rem;
 }
 
-#portfolio .projects-container .d-flex .col-sm-12:last-child {
+#portfolio .projects-container .row:last-child .col-sm-12:last-child {
   margin-bottom: 0;
 }
 
 @media screen and (min-width: 992px) {
-  #portfolio .projects-container .d-flex .col-sm-12 {
+  #portfolio .projects-container .row:last-child .col-sm-12 {
     margin-bottom: 0;
   }
 }
@@ -674,8 +688,20 @@
 }
 
 @media screen and (min-width: 992px) {
+  .projects #portfolio {
+    padding: 1.5rem 0 1rem 0;
+  }
+}
+
+@media screen and (min-width: 992px) and (min-width: 992px) {
+  .projects #portfolio {
+    padding: 2.25rem 0 2.5rem 0;
+  }
+}
+
+@media screen and (min-width: 992px) {
   .projects #portfolio .col-lg-6 {
-    margin-bottom: 2rem;
+    margin-bottom: 2rem !important;
   }
 }
 
